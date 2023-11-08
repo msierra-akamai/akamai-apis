@@ -1,0 +1,145 @@
+type: object
+description: |-
+  Reports provide a set of data sources, data stores, metrics, and dimensions.
+  
+x-akamai:
+  file-path: schemas/reportPack.yaml
+additionalProperties: false
+required:
+- id
+- name
+- isActive
+- type
+- subType
+- dataSources
+- dimensions
+- metrics
+- filters
+- dataStores
+- timezone
+properties:
+  id:
+    type: integer
+    description: |
+      Unique identifier for each report pack.
+  name:
+    type: string
+    description: |
+      Name of the report pack.
+  type:
+    type: string
+    description: |
+      This is an internal member.
+  dataSources:
+    type: array
+    description: |
+      Encapsulates all data sources for the report pack. A data source is a collection of raw log data with detailed information on each access to your digital property made by an end user. Each data source object provides information on the name of the data source and its ID.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - name
+      properties:
+        id:
+          type: integer
+          description: |
+            Unique identifier for each data source.
+        name:
+          type: string
+          description: |
+            Name of the data source.
+  dataStores:
+    type: array
+    description: |
+      Encapsulates all data stores for the report pack. A data store is a collection of dimensions and metrics stored in a database. Each data store object provides information on the name, type, short description and ID of the data store.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - name
+      - type
+      - description
+      properties:
+        id:
+          type: integer
+          description: |
+            Unique identifier for each data store.
+        name:
+          type: string
+          description: |
+            Name of the data store.
+        type:
+          type: string
+          description: |
+            Type of data store, either `standard` or `custom`.
+          enum:
+          - standard
+          - custom
+        description:
+          type: string
+          description: |
+            Text describing the data store.
+  dimensions:
+    type: array
+    description: |
+      Encapsulates all dimensions for the report pack. A dimension acts as a key in data exploration. It answers questions such as who, what, where, which. Each dimension object provides information on the name, type and ID of the dimension.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - name
+      - type
+      properties:
+        id:
+          type: integer
+          description: |
+            Unique identifier for each dimension.
+        name:
+          type: string
+          description: |
+            Name of the dimension.
+        type:
+          type: string
+          description: |
+            Type of dimension, either `standard` or `custom`.
+          enum:
+          - standard
+          - custom
+  filters:
+    type: string
+    description: |
+      Filters applied on the data captured in the report pack.
+  isActive:
+    type: boolean
+    description: |
+      Current activation status of the report pack.
+  metrics:
+    type: array
+    description: |
+      Encapsulates all metrics for the report pack. A metric is a numeric aggregation against one or more dimensions. Each metric object provides information on the name and ID of the metric. It answers questions on volume of activity or attack.
+    items:
+      type: object
+      additionalProperties: false
+      required:
+      - id
+      - name
+      properties:
+        id:
+          type: integer
+          description: |
+            Unique identifier for each metric.
+        name:
+          type: string
+          description: |
+            Name of the metric.
+  subType:
+    type: string
+    description: |
+      Type of the report pack.
+  timezone:
+    type: string
+    description: |
+      Timezone of data.

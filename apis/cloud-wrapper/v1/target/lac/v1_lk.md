@@ -1,0 +1,1 @@
+- Download this API's [RAML and JSON schema descriptors](v1-api.zip).

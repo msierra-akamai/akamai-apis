@@ -1,0 +1,18 @@
+[
+  {
+    "condition": "in",
+    "id": 78,
+    "type": "dimension",
+    "values": [
+      "IN"
+    ]
+  },
+  {
+    "condition": "gt",
+    "id": 128,
+    "type": "metric",
+    "values": [
+      100
+    ]
+  }
+]

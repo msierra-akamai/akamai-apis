@@ -1,0 +1,30 @@
+type: object
+description: |-
+  Encapsulates sorting parameters that are wrapped in an array, URL-encoded, and passed in with GET requests using the `sortParams` query parameter.
+  
+x-akamai:
+  file-path: schemas/sortParams.yaml
+additionalProperties: false
+required:
+- type
+- order
+- id
+properties:
+  id:
+    type: integer
+    description: |
+      ID of the sorting entity. The sorting entity should also be part of the query parameter `metrics` or `dimensions`.
+  type:
+    type: string
+    description: |
+      Indicates if the `id` parameter is a `dimension` or a `metric`.
+    enum:
+    - metric
+    - dimension
+  order:
+    type: string
+    description: |
+      Either `asc` for ascending or `desc` for descending sort order.
+    enum:
+    - asc
+    - desc

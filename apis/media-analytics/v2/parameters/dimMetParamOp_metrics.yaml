@@ -1,0 +1,11 @@
+name: metrics
+in: query
+description: |-
+  Identifies metrics with comma-separated IDs.
+  
+x-akamai:
+  file-path: parameters/dimMetParamOp_metrics.yaml
+required: true
+schema:
+  type: string
+  example: 546,544,3

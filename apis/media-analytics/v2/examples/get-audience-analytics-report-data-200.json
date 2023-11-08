@@ -1,0 +1,107 @@
+{
+  "rows": [
+    [
+      "DTAG DEUTSCHE TELEKOM AG",
+      "Germany",
+      "412376",
+      "0.07"
+    ],
+    [
+      "OTHERS",
+      "Germany",
+      "409724",
+      "0.05"
+    ],
+    [
+      "VODANET VODAFONE D2 GMBH",
+      "Germany",
+      "102520",
+      "0.05"
+    ],
+    [
+      "OTHERS",
+      "Austria",
+      "29288",
+      "0.07"
+    ],
+    [
+      "OTHERS",
+      "Switzerland",
+      "22647",
+      "0.07"
+    ],
+    [
+      "OTHERS",
+      "Japan",
+      "8622",
+      "0.01"
+    ],
+    [
+      "OTHERS",
+      "Italy",
+      "7247",
+      "0.01"
+    ],
+    [
+      "INTERNET ACCESS NETWORK OF TDE",
+      "Spain",
+      "4985",
+      "0.06"
+    ],
+    [
+      "OTHERS",
+      "Thailand",
+      "4863",
+      "0.25"
+    ],
+    [
+      "OTHERS",
+      "United Arab Emirates",
+      "4647",
+      null
+    ]
+  ],
+  "metaData": {
+    "startTimeInEpoch": 1395502200,
+    "reportPack": "Sample Audience Analytics Report Pack",
+    "offset": 0,
+    "limit": 10,
+    "timeZone": "GMT",
+    "hasMoreData": true,
+    "aggregation": 86400,
+    "endTimeInEpoch": 1395588600
+  },
+  "columns": [
+    {
+      "type": "dimension",
+      "name": "AS Name",
+      "description": "AS Name",
+      "index": 0
+    },
+    {
+      "type": "dimension",
+      "name": "Country",
+      "description": "Automatically set to the viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+      "index": 1
+    },
+    {
+      "type": "metric",
+      "name": "Attempts",
+      "id": 510,
+      "description": "Sum of attempts to play back content (title/main stream)",
+      "index": 2,
+      "aggregate": "1112032",
+      "peak": "412376"
+    },
+    {
+      "type": "metric",
+      "name": "Completion Percentage",
+      "id": 517,
+      "description": "Percentage of plays that lasted over 95% of the stream duration.",
+      "index": 3,
+      "aggregate": "0.06",
+      "peak": "0.25",
+      "unit": "%"
+    }
+  ]
+}

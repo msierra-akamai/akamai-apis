@@ -1,0 +1,8 @@
+type: array
+description: |-
+  A collection of data stores.
+  
+x-akamai:
+  file-path: schemas/dataStores.yaml
+items:
+  $ref: dataStore.yaml

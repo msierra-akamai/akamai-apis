@@ -1,0 +1,142 @@
+openapi: 3.0.0
+info:
+  title: Audience Analytics
+  version: '2'
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://{hostname}/media-analytics/v2
+x-akamai:
+  auth-type: EDGE_GRID
+  file-path: AudienceAnalytics.yaml
+paths:
+  /audience-analytics/report-packs:
+    get:
+      operationId: get-audience-analytics-report-packs
+      summary: List Audience Analytics report packs
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves `name`, `id` and `timezone` for all report packs created for your account.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-audience-analytics-report-packs-200.json
+              schema:
+                $ref: schemas/reportPacks.yaml
+  /audience-analytics/report-packs/{reportPackId}:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-audience-analytics-report-pack
+      summary: Get an Audience Analytics report pack
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves report pack name, data sources, metrics, and dimensions used in the report pack.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-a-audience-analytics-report-pack-200.json
+              schema:
+                $ref: schemas/reportPack.yaml
+  /audience-analytics/report-packs/{reportPackId}/data:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-audience-analytics-report-pack-data
+      summary: Get Audience Analytics report data
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves data for a specific report for the given query parameter. The parameters `filterParams` and `sortParams` are used to filter and sort data. The values for these parameters must be UTF-8 encoded JSON strings. Example strings are provided in the parameter description below.
+      parameters:
+      - $ref: parameters/dimMetParamOp_dimensions.yaml
+      - $ref: parameters/dimMetParamOp_metrics.yaml
+      - $ref: parameters/jsonFiltersParamOp_filterParams.yaml
+      - $ref: parameters/jsonFiltersParamOp_sortParams.yaml
+      - $ref: parameters/rangeParamOp_endDate.yaml
+      - $ref: parameters/rangeParamOp_startDate.yaml
+      - $ref: parameters/aggregationParamOp_aggregation.yaml
+      - $ref: parameters/batchParamOp_limit.yaml
+      - $ref: parameters/batchParamOp_offset.yaml
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-audience-analytics-report-data-200.json
+              schema:
+                $ref: schemas/data.yaml
+  /audience-analytics/report-packs/{reportPackId}/data-sources:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-audience-analytics-report-pack-data-sources
+      summary: List Audience Analytics data sources
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves the data sources available for Audience Analytics.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-audience-analytics-data-sources-200.json
+              schema:
+                $ref: schemas/dataSources.yaml
+  /audience-analytics/report-packs/{reportPackId}/data-stores:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-audience-analytics-report-pack-data-stores
+      summary: List Audience Analytics data stores
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves the data sources available for Audience Analytics.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-audience-analytics-data-stores-200.json
+              schema:
+                $ref: schemas/dataStores.yaml
+  /audience-analytics/report-packs/{reportPackId}/data-stores/{dataStoreId}:
+    parameters:
+    - $ref: parameters/dataStoreId-path.yaml
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-audience-analytics-report-pack-data-store
+      summary: Get an Audience Analytics data store
+      tags:
+      - Audience Analytics
+      description: |
+        Retrieves the data sources available for Audience Analytics.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-a-audience-analytics-data-store-200.json
+              schema:
+                $ref: schemas/dataStore.yaml

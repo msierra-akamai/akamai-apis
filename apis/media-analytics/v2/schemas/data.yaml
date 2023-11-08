@@ -1,0 +1,107 @@
+type: object
+description: |-
+  Encapsulates a Media data report.
+  
+x-akamai:
+  file-path: schemas/data.yaml
+additionalProperties: false
+required:
+- columns
+- rows
+- metaData
+properties:
+  columns:
+    type: array
+    description: |
+      Provides context for each element listed within corresponding `rows`.
+    minItems: 1
+    uniqueItems: true
+    items:
+      type: object
+      additionalProperties: false
+      required:
+      - type
+      - name
+      - description
+      - index
+      properties:
+        name:
+          type: string
+          description: |
+            Depending on the `type`, provides the name of the relevant dimension or metric.
+          minLength: 1
+        type:
+          type: string
+          description: |
+            Type of data: `dimension` or `metric`.
+          enum:
+          - dimension
+          - metric
+          minLength: 1
+        description:
+          type: string
+          description: |
+            Provides information about the relevant dimension or metric.
+          minLength: 1
+        aggregate:
+          type: string
+          description: |
+            Provides an aggregate value for the dimension or metric expressed in string format. For example, for `type`: `metric` and `name`: `Attempts`, the information returned would be the total number of attempts made.
+          minLength: 1
+        index:
+          type: integer
+          description: |
+            Positions each column within the table.
+  metaData:
+    type: object
+    description: |
+      Reflects the set of parameter values included in the request that determines this report's results.
+    additionalProperties: false
+    required:
+    - startTimeInEpoch
+    - endTimeInEpoch
+    - aggregation
+    - timeZone
+    - limit
+    - offset
+    - hasMoreData
+    properties:
+      aggregation:
+        type: integer
+        description: |
+          Time span included in each record, expressed in seconds.
+      endTimeInEpoch:
+        type: integer
+        description: |
+          End of the requested time range, in epoch seconds.
+      hasMoreData:
+        type: boolean
+        description: |
+          Indicates that a constrained set of requested data does not represent the entire set.
+      limit:
+        type: integer
+        description: |
+          Maximum number of requested data `rows`.
+      offset:
+        type: integer
+        description: |
+          The offset of the row from which the data should start. This is used with overall `limit` to set the point at which a batch of data starts. For example, setting both `offset` and `limit` to `100` selects rows 101-200 from the overall results.
+      startTimeInEpoch:
+        type: integer
+        description: |
+          Start of the requested time range, in epoch seconds.
+      timeZone:
+        type: string
+        description: |
+          Identifies the time zone from which the request was made.
+        minLength: 1
+  rows:
+    type: array
+    description: |
+      Encapsulates the report's two-dimensional table data. If there is no data to report, the array is empty.
+    uniqueItems: true
+    items:
+      type: array
+      uniqueItems: true
+      items:
+        type: string

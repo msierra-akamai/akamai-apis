@@ -1,0 +1,18 @@
+[
+  {
+    "id": 26273,
+    "name": "Sample Audience Analytics Report Pack",
+    "isActive": true,
+    "type": "ma",
+    "subType": "Audience Analytics",
+    "timezone": "GMT"
+  },
+  {
+    "id": 5538,
+    "name": "Live Streams",
+    "isActive": true,
+    "type": "ma",
+    "subType": "Audience Analytics",
+    "timezone": "EST5EDT"
+  }
+]

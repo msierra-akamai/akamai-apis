@@ -1,0 +1,358 @@
+{
+  "id": 132,
+  "name": "Console Cube",
+  "type": "standard",
+  "description": "Provides standard metrics and dimensions at a one-minute granularity.",
+  "aggregationInSeconds": 60,
+  "purgeIntervalInDays": 2,
+  "maxQueryDurationInMinutes": 120,
+  "dimensions": [
+    {
+      "id": 77,
+      "name": "Continent",
+      "description": "Viewer location. Available granularities are continent, region, country, and city.",
+      "type": "standard"
+    },
+    {
+      "id": 78,
+      "name": "Country",
+      "description": "Country from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 975,
+      "name": "appversion",
+      "description": "reserved_L3_1"
+    },
+    {
+      "id": 79,
+      "name": "Region",
+      "description": "Region from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 976,
+      "name": "Future Use #2",
+      "description": "reserved_L3_2",
+      "type": "standard"
+    },
+    {
+      "id": 81,
+      "name": "Connection Speed",
+      "description": "Internet connection speed of the visitor. Represented as low, mid, high, and very high.",
+      "type": "standard"
+    },
+    {
+      "id": 977,
+      "name": "Future Use #3",
+      "description": "reserved_L3_3",
+      "type": "standard"
+    },
+    {
+      "id": 82,
+      "name": "Format",
+      "description": "Set automatically to the encode and delivery format of the media. For example, WMS, Flash, Real, or Progressive Downloads",
+      "type": "standard"
+    },
+    {
+      "id": 978,
+      "name": "Future Use #4",
+      "description": "reserved_L3_4",
+      "type": "standard"
+    },
+    {
+      "id": 979,
+      "name": "Future Use #5",
+      "description": "reserved_L3_5",
+      "type": "standard"
+    },
+    {
+      "id": 83,
+      "name": "Time",
+      "description": "Time as per time zone specified in the report.",
+      "type": "standard"
+    },
+    {
+      "id": 84,
+      "name": "Error Code",
+      "description": "Code representing the encountered error.",
+      "type": "standard"
+    },
+    {
+      "id": 86,
+      "name": "Service Provider",
+      "description": "The CDN or delivery service provider used to stream the content.",
+      "type": "standard"
+    },
+    {
+      "id": 87,
+      "name": "Stream Name",
+      "description": "Set automatically. Indicates the stream URL.",
+      "type": "standard"
+    },
+    {
+      "id": 90,
+      "name": "Category",
+      "description": "Category of the content. For example: channel name, genre, or content type (movies, tv shows, sports events, or other events).",
+      "type": "standard"
+    },
+    {
+      "id": 91,
+      "name": "Player ID",
+      "description": "Name and version of player that played the media.",
+      "type": "standard"
+    },
+    {
+      "id": 94,
+      "name": "Title/Event Name",
+      "description": "Name of the title/event",
+      "type": "standard"
+    },
+    {
+      "id": 99,
+      "name": "Start Up Time Range",
+      "description": "The range of the sum of 'Connect Time' and 'Initial Buffer Time' experienced during a visit.",
+      "type": "standard"
+    },
+    {
+      "id": 933,
+      "name": "City",
+      "description": "City from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 934,
+      "name": "AS Name",
+      "description": "Name associated with the autonomous system of the internet service provider.",
+      "type": "standard"
+    },
+    {
+      "id": 200426,
+      "name": "Device",
+      "description": "Device that played the media.",
+      "type": "standard"
+    },
+    {
+      "id": 200425,
+      "name": "Live VoD 24x7",
+      "description": "Indicates live, on-demand, or 24x7 content.",
+      "type": "standard"
+    },
+    {
+      "id": 2932,
+      "name": "Device Type",
+      "description": "Type of device that played the media. For example, mobile phone, tablet, or desktop.",
+      "type": "standard"
+    },
+    {
+      "id": 2933,
+      "name": "OS",
+      "description": "Operating system of the device that played the media.",
+      "type": "standard"
+    },
+    {
+      "id": 2934,
+      "name": "Browser",
+      "description": "Browser that played the media.",
+      "type": "standard"
+    }
+  ],
+  "metrics": [
+    {
+      "id": 128,
+      "name": "Errors",
+      "type": "count",
+      "description": "The total count of all errors."
+    },
+    {
+      "id": 129,
+      "name": "Availability",
+      "unit": "%",
+      "type": "percent",
+      "description": "Average availability of media during user attempts to access it (excludes user abandons)."
+    },
+    {
+      "id": 130,
+      "name": "Rebuffer Time per Play",
+      "unit": "secs",
+      "type": "time",
+      "description": "The average time spent on rebuffering during each play."
+    },
+    {
+      "id": 131,
+      "name": "Bandwidth",
+      "unit": "bps",
+      "type": "bandwidth",
+      "description": "The average bandwidth experienced by users viewing the stream. Player buffer fills are sampled at regular intervals of 500 milliseconds at this bit rate. The sum average of these samples is represented as the average bandwidth."
+    },
+    {
+      "id": 132,
+      "name": "Frames per Second",
+      "type": "count",
+      "description": "Number of frames rendered during each session of a playback. Frames per second values are sampled at intervals of 500 milliseconds during playback and their sum average is represented as the average frames per second."
+    },
+    {
+      "id": 2117,
+      "name": "Rebuffer Abandons",
+      "type": "count",
+      "description": "Sum of plays abandoned during a rebuffering event"
+    },
+    {
+      "id": 133,
+      "name": "Start Up Time",
+      "unit": "secs",
+      "type": "time",
+      "description": "The average startup time per session"
+    },
+    {
+      "id": 2118,
+      "name": "% Mid Play Errors",
+      "unit": "%",
+      "type": "percent",
+      "description": "The percentage of errors experienced during the middle of play after a successful start."
+    },
+    {
+      "id": 134,
+      "name": "Rebuffers per Play",
+      "type": "count",
+      "description": "The average number of rebuffers experienced during a play."
+    },
+    {
+      "id": 135,
+      "name": "Upshifts",
+      "type": "count",
+      "description": "The average number of times users experienced a bitrate upshift during a session."
+    },
+    {
+      "id": 136,
+      "name": "Downshifts",
+      "type": "count",
+      "description": "The average number of times users experienced a bitrate downshift during a session."
+    },
+    {
+      "id": 137,
+      "name": "Plays with Rebuffers",
+      "type": "count",
+      "description": "Sum of plays with at least one rebuffering event."
+    },
+    {
+      "id": 714,
+      "name": "First Rebuffers",
+      "type": "count",
+      "description": "Number of first rebuffers encountered."
+    },
+    {
+      "id": 138,
+      "name": "Plays Started",
+      "type": "count",
+      "description": "Attempts to playback content that result in successful playback."
+    },
+    {
+      "id": 140,
+      "name": "Bitrate",
+      "unit": "Kbps",
+      "type": "bandwidth",
+      "description": "The average bit rate at which stream is played back."
+    },
+    {
+      "id": 656,
+      "name": "% Rebuffering Plays",
+      "unit": "%",
+      "type": "percent",
+      "description": "Weighted average of rebuffering sessions calculated at a one-minute aggregation. You can plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most and the size of the audience it affects."
+    },
+    {
+      "id": 144,
+      "name": "Dropped Frames",
+      "type": "count",
+      "description": "The average number of frames dropped per session during playback."
+    },
+    {
+      "id": 145,
+      "name": "Start Up Errors",
+      "type": "count",
+      "description": "The number of startup errors."
+    },
+    {
+      "id": 146,
+      "name": "Connect Time",
+      "unit": "secs",
+      "type": "time",
+      "description": "The average time spent over initial connection to the server."
+    },
+    {
+      "id": 147,
+      "name": "Buffer Time",
+      "unit": "secs",
+      "type": "time",
+      "description": "The average time per session spent over initial buffering before the start of play."
+    },
+    {
+      "id": 148,
+      "name": "Audience Size",
+      "type": "count",
+      "description": "Sum of concurrent streams or plays at a specific time. It can be used in all charts, except time, to show audience size for a chosen duration."
+    },
+    {
+      "id": 149,
+      "name": "Attempts",
+      "type": "count",
+      "description": "The total number of attempts to play a stream."
+    },
+    {
+      "id": 598,
+      "name": "% Rebuffering Plays(Avg)",
+      "unit": "%",
+      "type": "percent",
+      "description": "The percentage of sessions that experienced rebuffers. The ratio of number of sessions rebuffering at least once to the total number of active sessions."
+    },
+    {
+      "id": 150,
+      "name": "Rebuffer Time per Minute",
+      "unit": "secs",
+      "type": "time",
+      "description": "Average amount of time spent rebuffering every minute of playback."
+    },
+    {
+      "id": 121,
+      "name": "HD Play Duration",
+      "unit": "hours",
+      "type": "time",
+      "description": "The time during which the stream played in HD quality (>=2.5 mpbs)."
+    },
+    {
+      "id": 122,
+      "name": "HQ Play Duration",
+      "unit": "hours",
+      "type": "time",
+      "description": "The time during which the stream played in HQ quality (>=1.5 mpbs and <2.5 mbps)."
+    },
+    {
+      "id": 123,
+      "name": "SD Play Duration",
+      "unit": "hours",
+      "type": "time",
+      "description": "The time during which the stream played in SD quality (<1.5 mpbs)."
+    },
+    {
+      "id": 125,
+      "name": "Aggregate Play Duration",
+      "unit": "hours",
+      "type": "time",
+      "description": "The total number of hours that users played streams."
+    },
+    {
+      "id": 126,
+      "name": "Play Duration per Play",
+      "unit": "mins",
+      "type": "time",
+      "description": "Play duration divided by sum of plays."
+    },
+    {
+      "id": 127,
+      "name": "Plays Ended",
+      "type": "count",
+      "description": "`Plays Ended` includes both completed and abandoned plays. You can plot this metric with the `Rebuffer Time per Minute`, `Rebuffers per Minute` dimensions."
+    }
+  ]
+}

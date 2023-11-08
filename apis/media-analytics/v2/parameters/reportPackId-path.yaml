@@ -1,0 +1,11 @@
+name: reportPackId
+in: path
+description: |-
+  Unique identifier for each report pack.
+  
+x-akamai:
+  file-path: parameters/reportPackId-path.yaml
+required: true
+schema:
+  type: integer
+  example: 26273

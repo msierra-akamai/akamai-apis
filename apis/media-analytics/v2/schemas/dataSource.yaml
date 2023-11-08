@@ -1,0 +1,44 @@
+type: object
+description: |-
+  A collection of raw log data consisting of detailed information for each end-user access attempt made to your digital property.
+  
+x-akamai:
+  file-path: schemas/dataSource.yaml
+additionalProperties: false
+required:
+- id
+- name
+- type
+- dsType
+- configPath
+- values
+properties:
+  id:
+    type: integer
+    description: |
+      Unique identifier for each data source.
+  name:
+    type: string
+    description: |
+      Name of the data source.
+  type:
+    type: string
+    description: |
+      Associated pipeline of the data source.
+  configPath:
+    type: string
+    description: |
+      Represents the beacon configuration path. Available with the `beaconId` data source type.
+  dsType:
+    type: string
+    description: |
+      Type of data source, either client side or server side.  Client side data source is a `beaconId` which is an HTTP GET request sent by the player plugin to a pre-configured Akamai domain. Server side data source is a `cpcode` which is a unique identifier assigned to a customer.
+    enum:
+    - beaconId
+    - cpcode
+  values:
+    type: array
+    description: |
+      List of values that form the data source.
+    items:
+      type: string

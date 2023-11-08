@@ -1,0 +1,18 @@
+name: aggregation
+in: query
+description: |-
+  The time period you want to group each data record. You can include a numeric value to serve as a total number of seconds, or a keyword value to denote `day`, `week`, `month`, or `year`. (For example `30` for 30 seconds or `day` for one day).
+  
+x-akamai:
+  file-path: parameters/aggregationParamOp_aggregation.yaml
+schema:
+  oneOf:
+  - enum:
+    - day
+    - week
+    - month
+    - year
+    type: string
+    example: month
+  - example: 30
+    type: integer

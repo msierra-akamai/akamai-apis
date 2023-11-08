@@ -1,0 +1,142 @@
+openapi: 3.0.0
+info:
+  title: QoS Monitor
+  version: '2'
+  license:
+    name: Apache 2.0
+    url: https://www.apache.org/licenses/LICENSE-2.0.html
+servers:
+- url: https://{hostname}/media-analytics/v2
+x-akamai:
+  auth-type: EDGE_GRID
+  file-path: QoSMonitor.yaml
+paths:
+  /qos-monitor/report-packs:
+    get:
+      operationId: get-report-packs
+      summary: List QoS Monitor report packs
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves `name`, `id` and `timezone` for all report packs created for your account.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-qos-monitor-report-packs-200.json
+              schema:
+                $ref: schemas/reportPacks.yaml
+  /qos-monitor/report-packs/{reportPackId}:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-report-pack
+      summary: Get a QoS Monitor report pack
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves report pack name, data sources, metrics, and dimensions used in the report pack.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-a-qos-monitor-report-pack-200.json
+              schema:
+                $ref: schemas/reportPack.yaml
+  /qos-monitor/report-packs/{reportPackId}/data:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-report-pack-data
+      summary: Get QoS Monitor report data
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves data for a specific report for the given query parameter. The parameters `filterParams` and `sortParams` are used to filter and sort data. The values for these parameters must be UTF-8 encoded JSON strings. Example strings are provided in the parameter description below.
+      parameters:
+      - $ref: parameters/dimMetParamOp_dimensions.yaml
+      - $ref: parameters/dimMetParamOp_metrics.yaml
+      - $ref: parameters/jsonFiltersParamOp_filterParams.yaml
+      - $ref: parameters/jsonFiltersParamOp_sortParams.yaml
+      - $ref: parameters/rangeParamOp_endDate.yaml
+      - $ref: parameters/rangeParamOp_startDate.yaml
+      - $ref: parameters/aggregationParamOp_aggregation.yaml
+      - $ref: parameters/batchParamOp_limit.yaml
+      - $ref: parameters/batchParamOp_offset.yaml
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-qos-monitor-report-data-200.json
+              schema:
+                $ref: schemas/data.yaml
+  /qos-monitor/report-packs/{reportPackId}/data-sources:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-data-sources
+      summary: List QoS Monitor data sources
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves the data sources available for QoS Monitor.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-qos-monitor-data-sources-200.json
+              schema:
+                $ref: schemas/dataSources.yaml
+  /qos-monitor/report-packs/{reportPackId}/data-stores:
+    parameters:
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-data-stores
+      summary: List QoS Monitor data stores
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves all the data stores available for QoS Monitor.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/list-qos-monitor-data-stores-200.json
+              schema:
+                $ref: schemas/dataStores.yaml
+  /qos-monitor/report-packs/{reportPackId}/data-stores/{dataStoreId}:
+    parameters:
+    - $ref: parameters/dataStoreId-path.yaml
+    - $ref: parameters/reportPackId-path.yaml
+    get:
+      operationId: get-data-store
+      summary: Get a QoS Monitor data store
+      tags:
+      - QoS Monitor
+      description: |
+        Retrieves dimensions, metrics, aggregation interval, purge interval, maximum allowed query interval, and other data store details.
+      responses:
+        200:
+          description: |
+            Successful response.
+          content:
+            application/json:
+              example:
+                $ref: examples/get-a-qos-monitor-data-store-200.json
+              schema:
+                $ref: schemas/dataStore.yaml

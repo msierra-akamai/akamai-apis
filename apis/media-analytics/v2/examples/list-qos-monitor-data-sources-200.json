@@ -1,0 +1,12 @@
+[
+  {
+    "id": 2340,
+    "name": "HDS Test Data Source",
+    "type": "clientSide",
+    "dsType": "beaconId",
+    "configPath": "http://datasource.host.net/config/beacon-2340.xml",
+    "values": [
+      "4adf65da4ecf15750"
+    ]
+  }
+]

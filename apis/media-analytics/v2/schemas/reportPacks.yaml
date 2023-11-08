@@ -1,0 +1,8 @@
+type: array
+description: |-
+  A collection of report packs.
+  
+x-akamai:
+  file-path: schemas/reportPacks.yaml
+items:
+  $ref: reportPack.yaml

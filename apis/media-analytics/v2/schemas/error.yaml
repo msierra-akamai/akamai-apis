@@ -1,0 +1,15 @@
+type: object
+x-akamai:
+  file-path: schemas/error.yaml
+additionalProperties: false
+required:
+- type
+- title
+- status
+properties:
+  type:
+    type: string
+  title:
+    type: string
+  status:
+    type: string

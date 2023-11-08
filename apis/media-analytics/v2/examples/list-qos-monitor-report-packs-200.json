@@ -1,0 +1,18 @@
+[
+  {
+    "id": 6833,
+    "name": "ReportPack Qos",
+    "isActive": true,
+    "type": "qos",
+    "subType": "QOS Monitor - All",
+    "timezone": "GMT"
+  },
+  {
+    "id": 6311,
+    "name": "HDS Test",
+    "isActive": true,
+    "type": "qos",
+    "subType": "QOS Monitor - All",
+    "timezone": "Asia/Calcutta"
+  }
+]

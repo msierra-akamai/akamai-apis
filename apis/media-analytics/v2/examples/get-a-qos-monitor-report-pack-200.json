@@ -1,0 +1,305 @@
+{
+  "id": 6311,
+  "name": "HDS Test",
+  "isActive": true,
+  "type": "qos",
+  "subType": "QOS Monitor - All",
+  "timezone": "Asia/Calcutta",
+  "dataSources": [
+    {
+      "id": 4553,
+      "name": "Qos monitor data Source"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": 975,
+      "name": "Future Use #1"
+    },
+    {
+      "id": 934,
+      "name": "AS Name",
+      "type": "standard"
+    },
+    {
+      "id": 2934,
+      "name": "Browser",
+      "type": "standard"
+    },
+    {
+      "id": 90,
+      "name": "Category",
+      "type": "standard"
+    },
+    {
+      "id": 933,
+      "name": "City",
+      "type": "standard"
+    },
+    {
+      "id": 81,
+      "name": "Connection Speed",
+      "type": "standard"
+    },
+    {
+      "id": 77,
+      "name": "Continent",
+      "type": "standard"
+    },
+    {
+      "id": 78,
+      "name": "Country",
+      "type": "standard"
+    },
+    {
+      "id": 200426,
+      "name": "Device",
+      "type": "standard"
+    },
+    {
+      "id": 2932,
+      "name": "Device Type",
+      "type": "standard"
+    },
+    {
+      "id": 84,
+      "name": "Error Code",
+      "type": "standard"
+    },
+    {
+      "id": 82,
+      "name": "Format",
+      "type": "standard"
+    },
+    {
+      "id": 976,
+      "name": "Future Use #2",
+      "type": "standard"
+    },
+    {
+      "id": 977,
+      "name": "Future Use #3",
+      "type": "standard"
+    },
+    {
+      "id": 978,
+      "name": "Future Use #4",
+      "type": "standard"
+    },
+    {
+      "id": 979,
+      "name": "Future Use #5",
+      "type": "standard"
+    },
+    {
+      "id": 200425,
+      "name": "Live VoD 24x7",
+      "type": "standard"
+    },
+    {
+      "id": 88,
+      "name": "Network",
+      "type": "standard"
+    },
+    {
+      "id": 95,
+      "name": "Notification ID",
+      "type": "standard"
+    },
+    {
+      "id": 2933,
+      "name": "OS",
+      "type": "standard"
+    },
+    {
+      "id": 91,
+      "name": "Player ID",
+      "type": "standard"
+    },
+    {
+      "id": 79,
+      "name": "Region",
+      "type": "standard"
+    },
+    {
+      "id": 86,
+      "name": "Service Provider",
+      "type": "standard"
+    },
+    {
+      "id": 99,
+      "name": "Start Up Time Range",
+      "type": "standard"
+    },
+    {
+      "id": 87,
+      "name": "Stream Name",
+      "type": "standard"
+    },
+    {
+      "id": 83,
+      "name": "Time",
+      "type": "standard"
+    },
+    {
+      "id": 100,
+      "name": "Title",
+      "type": "standard"
+    },
+    {
+      "id": 94,
+      "name": "Title/Event Name",
+      "type": "standard"
+    }
+  ],
+  "metrics": [
+    {
+      "id": 2118,
+      "name": "% Mid Play Errors"
+    },
+    {
+      "id": 656,
+      "name": "% Rebuffering Plays"
+    },
+    {
+      "id": 598,
+      "name": "% Rebuffering Plays(Avg)"
+    },
+    {
+      "id": 125,
+      "name": "Aggregate Play Duration"
+    },
+    {
+      "id": 350,
+      "name": "Alert Metrics"
+    },
+    {
+      "id": 149,
+      "name": "Attempts"
+    },
+    {
+      "id": 148,
+      "name": "Audience Size"
+    },
+    {
+      "id": 129,
+      "name": "Availability"
+    },
+    {
+      "id": 131,
+      "name": "Bandwidth"
+    },
+    {
+      "id": 140,
+      "name": "Bitrate"
+    },
+    {
+      "id": 147,
+      "name": "Buffer Time"
+    },
+    {
+      "id": 146,
+      "name": "Connect Time"
+    },
+    {
+      "id": 349,
+      "name": "Diagnostic"
+    },
+    {
+      "id": 136,
+      "name": "Downshifts"
+    },
+    {
+      "id": 144,
+      "name": "Dropped Frames"
+    },
+    {
+      "id": 128,
+      "name": "Errors"
+    },
+    {
+      "id": 714,
+      "name": "First Rebuffers"
+    },
+    {
+      "id": 132,
+      "name": "Frames per Second"
+    },
+    {
+      "id": 121,
+      "name": "HD Play Duration"
+    },
+    {
+      "id": 122,
+      "name": "HQ Play Duration"
+    },
+    {
+      "id": 126,
+      "name": "Play Duration per Play"
+    },
+    {
+      "id": 127,
+      "name": "Plays Ended"
+    },
+    {
+      "id": 138,
+      "name": "Plays Started"
+    },
+    {
+      "id": 137,
+      "name": "Plays with Rebuffers"
+    },
+    {
+      "id": 2117,
+      "name": "Rebuffer Abandons"
+    },
+    {
+      "id": 150,
+      "name": "Rebuffer Time per Minute"
+    },
+    {
+      "id": 130,
+      "name": "Rebuffer Time per Play"
+    },
+    {
+      "id": 134,
+      "name": "Rebuffers per Play"
+    },
+    {
+      "id": 123,
+      "name": "SD Play Duration"
+    },
+    {
+      "id": 145,
+      "name": "Start Up Errors"
+    },
+    {
+      "id": 133,
+      "name": "Start Up Time"
+    },
+    {
+      "id": 135,
+      "name": "Upshifts"
+    }
+  ],
+  "dataStores": [
+    {
+      "id": 132,
+      "name": "Console Cube",
+      "type": "standard",
+      "description": "Provides standard metrics and dimensions at a granularity of one minute."
+    },
+    {
+      "id": 186,
+      "name": "Notification Cube",
+      "type": "standard",
+      "description": "Provides metrics and dimensions for use in obtaining details on triggered notifications."
+    },
+    {
+      "id": 139,
+      "name": "Time Cube",
+      "type": "standard",
+      "description": "Provides standard metrics for a time period at a granularity of one minute."
+    }
+  ]
+}

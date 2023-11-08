@@ -1,0 +1,674 @@
+{
+  "id": 26273,
+  "name": "TestingAudience",
+  "isActive": true,
+  "type": "ma",
+  "subType": "Audience Analytics",
+  "filters": null,
+  "timezone": "GMT",
+  "dataSources": [
+    {
+      "id": 1336,
+      "name": "Audience Analytics Data Source"
+    }
+  ],
+  "dimensions": [
+    {
+      "id": 838,
+      "name": "Ad Density(Play Level)",
+      "type": "standard"
+    },
+    {
+      "id": 842,
+      "name": "Ad Density(Visit Level)",
+      "type": "standard"
+    },
+    {
+      "id": 965,
+      "name": "Ad Duration",
+      "type": "standard"
+    },
+    {
+      "id": 964,
+      "name": "Ad Industry Category",
+      "type": "standard"
+    },
+    {
+      "id": 968,
+      "name": "Ad Placement",
+      "type": "standard"
+    },
+    {
+      "id": 969,
+      "name": "Ad Play%",
+      "type": "standard"
+    },
+    {
+      "id": 963,
+      "name": "Ad Server",
+      "type": "standard"
+    },
+    {
+      "id": 966,
+      "name": "Ad Title",
+      "type": "standard"
+    },
+    {
+      "id": 846,
+      "name": "AS Name",
+      "type": "standard"
+    },
+    {
+      "id": 160,
+      "name": "Bitrate",
+      "type": "standard"
+    },
+    {
+      "id": 949,
+      "name": "Category",
+      "type": "standard"
+    },
+    {
+      "id": 6,
+      "name": "City",
+      "type": "standard"
+    },
+    {
+      "id": 8,
+      "name": "Connection Speed",
+      "type": "standard"
+    },
+    {
+      "id": 951,
+      "name": "Content Length",
+      "type": "standard"
+    },
+    {
+      "id": 2,
+      "name": "Continent",
+      "type": "standard"
+    },
+    {
+      "id": 4,
+      "name": "Country",
+      "type": "standard"
+    },
+    {
+      "id": 960,
+      "name": "Custom Viewer 1",
+      "type": "standard"
+    },
+    {
+      "id": 940,
+      "name": "custom_Play 1",
+      "type": "standard"
+    },
+    {
+      "id": 941,
+      "name": "custom_Play 2",
+      "type": "standard"
+    },
+    {
+      "id": 936,
+      "name": "custom_Viewer 2",
+      "type": "standard"
+    },
+    {
+      "id": 938,
+      "name": "custom_Visit 1",
+      "type": "standard"
+    },
+    {
+      "id": 939,
+      "name": "custom_Visit 2",
+      "type": "standard"
+    },
+    {
+      "id": 932,
+      "name": "Device",
+      "type": "standard"
+    },
+    {
+      "id": 157,
+      "name": "Error Code",
+      "type": "standard"
+    },
+    {
+      "id": 9,
+      "name": "Format",
+      "type": "standard"
+    },
+    {
+      "id": 953,
+      "name": "ISP",
+      "type": "standard"
+    },
+    {
+      "id": 958,
+      "name": "Live VOD 24x7",
+      "type": "standard"
+    },
+    {
+      "id": 959,
+      "name": "Max Bitrate (Play)",
+      "type": "standard"
+    },
+    {
+      "id": 956,
+      "name": "Max Bitrate (Visit)",
+      "type": "standard"
+    },
+    {
+      "id": 931,
+      "name": "Os",
+      "type": "standard"
+    },
+    {
+      "id": 845,
+      "name": "Play Duration Per Play",
+      "type": "standard"
+    },
+    {
+      "id": 957,
+      "name": "Player Id",
+      "type": "standard"
+    },
+    {
+      "id": 944,
+      "name": "Player Url",
+      "type": "standard"
+    },
+    {
+      "id": 848,
+      "name": "Rebuffer Time Per Minute  (Visit)",
+      "type": "standard"
+    },
+    {
+      "id": 840,
+      "name": "Rebuffer Time Per Minute (Play)",
+      "type": "standard"
+    },
+    {
+      "id": 835,
+      "name": "Rebuffer Time Per Play",
+      "type": "standard"
+    },
+    {
+      "id": 843,
+      "name": "Rebuffer Time Per Visit",
+      "type": "standard"
+    },
+    {
+      "id": 837,
+      "name": "Rebuffers Per Minute (Play)",
+      "type": "standard"
+    },
+    {
+      "id": 836,
+      "name": "Rebuffers Per Play",
+      "type": "standard"
+    },
+    {
+      "id": 844,
+      "name": "Rebuffers Per Visit",
+      "type": "standard"
+    },
+    {
+      "id": 945,
+      "name": "Referral Url",
+      "type": "standard"
+    },
+    {
+      "id": 5,
+      "name": "Region",
+      "type": "standard"
+    },
+    {
+      "id": 942,
+      "name": "Service Provider",
+      "type": "standard"
+    },
+    {
+      "id": 943,
+      "name": "Show",
+      "type": "standard"
+    },
+    {
+      "id": 946,
+      "name": "StartUp Errors Per Visit",
+      "type": "standard"
+    },
+    {
+      "id": 947,
+      "name": "StartUp Time",
+      "type": "standard"
+    },
+    {
+      "id": 833,
+      "name": "Stream Name",
+      "type": "standard"
+    },
+    {
+      "id": 156,
+      "name": "Stream Position",
+      "type": "standard"
+    },
+    {
+      "id": 948,
+      "name": "Sub Category",
+      "type": "standard"
+    },
+    {
+      "id": 12,
+      "name": "Time",
+      "type": "standard"
+    },
+    {
+      "id": 184,
+      "name": "Title / Event Name",
+      "type": "standard"
+    }
+  ],
+  "metrics": [
+    {
+      "id": 610,
+      "name": "% Ad Abandons (Play Level)"
+    },
+    {
+      "id": 617,
+      "name": "% Ad Abandons (Visit Level)"
+    },
+    {
+      "id": 701,
+      "name": "% Ads Abandoned"
+    },
+    {
+      "id": 565,
+      "name": "% Plays Abandoned"
+    },
+    {
+      "id": 155,
+      "name": "% Rebuffering Plays"
+    },
+    {
+      "id": 657,
+      "name": "% Rebuffering Plays (Avg)"
+    },
+    {
+      "id": 623,
+      "name": "24x7 Plays"
+    },
+    {
+      "id": 704,
+      "name": "Ad Abandons"
+    },
+    {
+      "id": 616,
+      "name": "Ad Abandons (Visit Level)"
+    },
+    {
+      "id": 705,
+      "name": "Ad completed"
+    },
+    {
+      "id": 611,
+      "name": "Ad Density (Play Level)"
+    },
+    {
+      "id": 712,
+      "name": "Ad Duration"
+    },
+    {
+      "id": 706,
+      "name": "Ad play duration"
+    },
+    {
+      "id": 709,
+      "name": "Ad Play Errors"
+    },
+    {
+      "id": 702,
+      "name": "Ad Play Percentage"
+    },
+    {
+      "id": 703,
+      "name": "Ad Plays"
+    },
+    {
+      "id": 608,
+      "name": "Ad Plays (Play Level)"
+    },
+    {
+      "id": 615,
+      "name": "Ad Plays (Visit Level)"
+    },
+    {
+      "id": 708,
+      "name": "Ad Start Up Time (Avg)"
+    },
+    {
+      "id": 510,
+      "name": "Attempts"
+    },
+    {
+      "id": 117,
+      "name": "Audience Size"
+    },
+    {
+      "id": 583,
+      "name": "Availability"
+    },
+    {
+      "id": 707,
+      "name": "Average Ad Play Duration"
+    },
+    {
+      "id": 112,
+      "name": "Average Connect Time"
+    },
+    {
+      "id": 113,
+      "name": "Average Initial Buffer Time "
+    },
+    {
+      "id": 622,
+      "name": "Average Rebuffer Time per Play"
+    },
+    {
+      "id": 80,
+      "name": "Bandwidth"
+    },
+    {
+      "id": 581,
+      "name": "Bitrate"
+    },
+    {
+      "id": 102,
+      "name": "Bitrate (Avg)"
+    },
+    {
+      "id": 86,
+      "name": "Bitrate Downshift"
+    },
+    {
+      "id": 85,
+      "name": "Bitrate Upshifts"
+    },
+    {
+      "id": 517,
+      "name": "Completion Percentage"
+    },
+    {
+      "id": 501,
+      "name": "Daily Viewers (Title/Event Name)"
+    },
+    {
+      "id": 110,
+      "name": "Dropped Frames"
+    },
+    {
+      "id": 74,
+      "name": "Errors"
+    },
+    {
+      "id": 81,
+      "name": "Frames per Second"
+    },
+    {
+      "id": 2000,
+      "name": "Hourly Viewers"
+    },
+    {
+      "id": 2002,
+      "name": "Monthly Viewers"
+    },
+    {
+      "id": 506,
+      "name": "New Viewers"
+    },
+    {
+      "id": 546,
+      "name": "Peeks"
+    },
+    {
+      "id": 563,
+      "name": "Play Duration"
+    },
+    {
+      "id": 531,
+      "name": "Play Duration (Bitrate Level)"
+    },
+    {
+      "id": 159,
+      "name": "Play Duration per Play"
+    },
+    {
+      "id": 544,
+      "name": "Play Duration per Visit"
+    },
+    {
+      "id": 566,
+      "name": "Play Duration per Visit (Visit Level)"
+    },
+    {
+      "id": 516,
+      "name": "Play Percentage"
+    },
+    {
+      "id": 511,
+      "name": "Plays"
+    },
+    {
+      "id": 530,
+      "name": "Plays (Bitrate Level)"
+    },
+    {
+      "id": 625,
+      "name": "Plays (Visit Level)"
+    },
+    {
+      "id": 562,
+      "name": "Plays Abandoned"
+    },
+    {
+      "id": 513,
+      "name": "Plays Completed"
+    },
+    {
+      "id": 71,
+      "name": "Plays Ended"
+    },
+    {
+      "id": 533,
+      "name": "Plays Ended (Play Position Level)"
+    },
+    {
+      "id": 504,
+      "name": "Plays per Viewer"
+    },
+    {
+      "id": 538,
+      "name": "Plays per Viewer (Daily)"
+    },
+    {
+      "id": 542,
+      "name": "Plays per Visit (Play Level)"
+    },
+    {
+      "id": 626,
+      "name": "Plays Per Visit (Visit Level)"
+    },
+    {
+      "id": 609,
+      "name": "Plays with Ad Abandons"
+    },
+    {
+      "id": 514,
+      "name": "Plays with Errors"
+    },
+    {
+      "id": 515,
+      "name": "Plays with Rebuffers"
+    },
+    {
+      "id": 2003,
+      "name": "Quarterly Viewers"
+    },
+    {
+      "id": 710,
+      "name": "Rebuffer Abandons"
+    },
+    {
+      "id": 573,
+      "name": "Rebuffer Time per Minute"
+    },
+    {
+      "id": 574,
+      "name": "Rebuffers per Minute"
+    },
+    {
+      "id": 621,
+      "name": "Reserved Metric"
+    },
+    {
+      "id": 576,
+      "name": "Startup Abandonment Rate"
+    },
+    {
+      "id": 575,
+      "name": "Startup Abandons"
+    },
+    {
+      "id": 111,
+      "name": "Startup Errors"
+    },
+    {
+      "id": 82,
+      "name": "Startup Time"
+    },
+    {
+      "id": 612,
+      "name": "Total Play Duration"
+    },
+    {
+      "id": 614,
+      "name": "Total Rebuffer Count"
+    },
+    {
+      "id": 613,
+      "name": "Total Rebuffer time"
+    },
+    {
+      "id": 502,
+      "name": "Viewer (Daily)"
+    },
+    {
+      "id": 624,
+      "name": "Visit Plays"
+    },
+    {
+      "id": 582,
+      "name": "Visits"
+    },
+    {
+      "id": 508,
+      "name": "Visits Ended"
+    },
+    {
+      "id": 503,
+      "name": "Visits per Viewer"
+    },
+    {
+      "id": 541,
+      "name": "Visits per Viewer (Daily)"
+    },
+    {
+      "id": 2001,
+      "name": "Weekly Viewers"
+    },
+    {
+      "id": 2004,
+      "name": "Yearly Viewers"
+    }
+  ],
+  "dataStores": [
+    {
+      "id": 2466,
+      "name": "Audience Analytics Time Cube",
+      "type": "standard",
+      "description": "time cube for AA 2."
+    },
+    {
+      "id": 402,
+      "name": "audience_ad_cube",
+      "type": "standard",
+      "description": "Audience Analytics AD Cube"
+    },
+    {
+      "id": 130,
+      "name": "audience_ad_title_cube",
+      "type": "standard",
+      "description": "Audience Analytics Title_AD Cube"
+    },
+    {
+      "id": 98,
+      "name": "cld_cube_15min",
+      "type": "standard",
+      "description": "Content LeaderBoard"
+    },
+    {
+      "id": 97,
+      "name": "cld_cube_1day",
+      "type": "standard",
+      "description": "Content Leaderboard"
+    },
+    {
+      "id": 95,
+      "name": "cube_br_level1",
+      "type": "standard",
+      "description": "cube_br_level1"
+    },
+    {
+      "id": 99,
+      "name": "cube_br_startup_error",
+      "type": "standard",
+      "description": "cube_br_startup_error"
+    },
+    {
+      "id": 94,
+      "name": "cube_br_viewer_title",
+      "type": "standard",
+      "description": "cube_br_viewer_title"
+    },
+    {
+      "id": 90,
+      "name": "led_cube_15min",
+      "type": "standard",
+      "description": "Live Event Dashboard"
+    },
+    {
+      "id": 112,
+      "name": "led_cube_1d",
+      "type": "standard",
+      "description": "Live Event Dashboard"
+    },
+    {
+      "id": 89,
+      "name": "led_cube_1day",
+      "type": "standard",
+      "description": "Live Events dashboard"
+    },
+    {
+      "id": 92,
+      "name": "led_cube_bucketed_15min",
+      "type": "standard",
+      "description": "Live Event Dashboard"
+    },
+    {
+      "id": 91,
+      "name": "led_cube_bucketed_1day",
+      "type": "standard",
+      "description": "Live Event Dashboard"
+    }
+  ]
+}

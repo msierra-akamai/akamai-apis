@@ -1,0 +1,8 @@
+type: array
+description: |-
+  A collection of data sources.
+  
+x-akamai:
+  file-path: schemas/dataSources.yaml
+items:
+  $ref: dataSource.yaml

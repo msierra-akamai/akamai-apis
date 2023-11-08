@@ -1,0 +1,32 @@
+[
+  {
+    "id": 223,
+    "name": "DataSource_1",
+    "type": "clientside_qos1_sm",
+    "dsType": "policyId",
+    "values": [
+      "jsbeacon8",
+      "jsbeacon9"
+    ]
+  },
+  {
+    "id": 70,
+    "name": "CP Progressive Downloads",
+    "type": "serverSide",
+    "dsType": "cpCode",
+    "values": [
+      "12345",
+      "67890"
+    ]
+  },
+  {
+    "id": 136,
+    "name": "CBSi Audience Analytics",
+    "type": "clientSide",
+    "dsType": "beaconId",
+    "configPath": "http://config.server/config/beacon-1336.xml",
+    "values": [
+      "alphanum3r1cbeac0n1d"
+    ]
+  }
+]

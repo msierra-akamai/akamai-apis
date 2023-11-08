@@ -1,0 +1,49 @@
+type: object
+description: |-
+  Encapsulates filtering parameters wrapped in an array, URL-encoded, and passed in with GET requests using the `filterParams` query parameter.
+  
+x-akamai:
+  file-path: schemas/filterParams.yaml
+additionalProperties: false
+required:
+- type
+- values
+- id
+- condition
+properties:
+  id:
+    type: integer
+    description: |
+      Identifies each dimension or metric filtering entity.
+  type:
+    type: string
+    description: |
+      Specifies whether the provided `id` parameter is a `dimension` or a `metric`.
+    enum:
+    - dimension
+    - metric
+  condition:
+    type: string
+    description: |
+      Condition specifier. For dimensions: `in`, `nin` (in or not in), `contains`, `ncontains` (does or doesn't contain), `starts`, `nstarts` (does or doesn't start with), `ends`, `nends` (does or doesn't end with). For metrics: `eq`, `neq` (equal or not), `gt` (greater than), `gte` (greater than or equal), `lt` (less than), `lte` (less than or equal).
+    enum:
+    - in
+    - nin
+    - contains
+    - ncontains
+    - starts
+    - nstarts
+    - ends
+    - nends
+    - eq
+    - neq
+    - gt
+    - gte
+    - lt
+    - lte
+  values:
+    type: array
+    items:
+      type: string
+      description: |
+        List of values used to filter the result. Values represent either inclusions or exclusions, depending on what the `condition` parameter specifies. Use the two-character country code to filter Media Analytics data by location. To get the list of country codes, go to the Luna Control Center. Download a CSV mapping from Support &rArr; User and Developer Guides &rArr; EdgeScape &rArr; Data Codes &rArr; Country Code.

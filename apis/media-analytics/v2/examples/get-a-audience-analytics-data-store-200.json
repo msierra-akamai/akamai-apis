@@ -1,0 +1,301 @@
+{
+  "id": 95,
+  "name": "cube_br_level1",
+  "type": "standard",
+  "description": "cube_br_level1",
+  "aggregationInSeconds": 3600,
+  "purgeIntervalInDays": 403,
+  "maxQueryDurationInMinutes": 580320,
+  "dimensions": [
+    {
+      "id": 960,
+      "name": "Custom Viewer 1",
+      "description": "Placeholder for a custom dimension that captures data at the viewer level. To edit the dimension name on the Luna Control Center, in `Configure`, go to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+      "type": "standard"
+    },
+    {
+      "id": 2,
+      "name": "Continent",
+      "description": "Viewer location. Available granularities are continent, region, country, and city.",
+      "type": "standard"
+    },
+    {
+      "id": 931,
+      "name": "Os",
+      "description": "Operating system of the device on which the media was played.",
+      "type": "standard"
+    },
+    {
+      "id": 4,
+      "name": "Country",
+      "description": "Country from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 932,
+      "name": "Device",
+      "description": "Device on which the media was played. For example, mobile phone, tablet, or desktop.",
+      "type": "standard"
+    },
+    {
+      "id": 5,
+      "name": "Region",
+      "description": "Region from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 6,
+      "name": "City",
+      "description": "City from which viewer requested media.",
+      "type": "standard"
+    },
+    {
+      "id": 936,
+      "name": "custom_Viewer 2",
+      "description": "Placeholder for a custom dimension that captures data at the viewer level.",
+      "type": "standard"
+    },
+    {
+      "id": 12,
+      "name": "Time",
+      "description": "Time as per time zone specified in the report.",
+      "type": "standard"
+    }
+  ],
+  "metrics": [
+    {
+      "id": 576,
+      "name": "Startup Abandonment Rate",
+      "unit": "%",
+      "type": "percent",
+      "description": "Percentage of plays abandoned by viewers before initial buffer fill."
+    },
+    {
+      "id": 513,
+      "name": "Plays Completed",
+      "type": "count",
+      "description": "Total number of plays that played back at least 95% of content."
+    },
+    {
+      "id": 514,
+      "name": "Plays with Errors",
+      "type": "count",
+      "description": "Total number of play attempts that ended before start of playback due to errors."
+    },
+    {
+      "id": 515,
+      "name": "Plays with Rebuffers",
+      "type": "count",
+      "description": "Sum of plays with at least one rebuffering event."
+    },
+    {
+      "id": 516,
+      "name": "Play Percentage",
+      "unit": "%",
+      "type": "percent",
+      "description": "Average play percentage of all plays of the media title."
+    },
+    {
+      "id": 581,
+      "name": "Bitrate",
+      "unit": "Kbps",
+      "type": "bandwidth",
+      "description": "Average bitrate at which media is played back. Samples for calculation are taken at regular time intervals during playback (~500ms)."
+    },
+    {
+      "id": 517,
+      "name": "Completion Percentage",
+      "unit": "%",
+      "type": "percent",
+      "description": "Percentage of plays that played over 95% of the duration of the stream."
+    },
+    {
+      "id": 582,
+      "name": "Visits",
+      "type": "count",
+      "description": "Sum of viewer sessions of media playback activity with more than one title played during the course of a visit."
+    },
+    {
+      "id": 583,
+      "name": "Availability",
+      "unit": "%",
+      "type": "percent",
+      "description": "Average availability across all attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+    },
+    {
+      "id": 71,
+      "name": "Plays Ended",
+      "type": "count",
+      "description": "Plays ended include both completed and abandoned plays. You can plot this metric with the `Rebuffer time per Minute` and `Rebuffers per Minute` dimensions."
+    },
+    {
+      "id": 2000,
+      "name": "Hourly Viewers",
+      "type": "count",
+      "description": "Unique viewers for a given hour."
+    },
+    {
+      "id": 2001,
+      "name": "Weekly Viewers",
+      "type": "count",
+      "description": "Sum of unique viewers for a given week."
+    },
+    {
+      "id": 2002,
+      "name": "Monthly Viewers",
+      "type": "count",
+      "description": "Sum of unique viewers for a given month."
+    },
+    {
+      "id": 82,
+      "name": "Startup Time",
+      "unit": "secs",
+      "type": "time",
+      "description": "Average startup time per session."
+    },
+    {
+      "id": 2003,
+      "name": "Quarterly Viewers",
+      "type": "count",
+      "description": "Sum of unique viewers for a given quarter."
+    },
+    {
+      "id": 2004,
+      "name": "Yearly Viewers",
+      "type": "count",
+      "description": "Sum of unique viewers for a given year."
+    },
+    {
+      "id": 538,
+      "name": "Plays per Viewer (Daily)",
+      "type": "count",
+      "description": "Total plays divided by the number of daily viewers."
+    },
+    {
+      "id": 541,
+      "name": "Visits per Viewer (Daily)",
+      "type": "count",
+      "description": "Total visits divided by the number of daily viewers."
+    },
+    {
+      "id": 542,
+      "name": "Plays per Visit (Play Level)",
+      "unit": " ",
+      "type": "count",
+      "description": "Total plays divided by the number of visits."
+    },
+    {
+      "id": 544,
+      "name": "Play Duration per Visit",
+      "unit": "mins",
+      "type": "time",
+      "description": "Total play duration divided by the number of visits."
+    },
+    {
+      "id": 546,
+      "name": "Peeks",
+      "type": "count",
+      "description": "Total number of peeks, plays that last less than 5 seconds."
+    },
+    {
+      "id": 623,
+      "name": "24x7 Plays",
+      "type": "count",
+      "description": "Sum of first plays for a 24x7 stream. The plays metric for a 24x7 stream includes the first play as well as subsequent plays before the user ends the session."
+    },
+    {
+      "id": 111,
+      "name": "Startup Errors",
+      "type": "count",
+      "description": "Total number of plays that did not start due to errors."
+    },
+    {
+      "id": 562,
+      "name": "Plays Abandoned",
+      "type": "count",
+      "description": "Total number of plays that did not reach 95% of content playback."
+    },
+    {
+      "id": 563,
+      "name": "Play Duration",
+      "unit": "hours",
+      "type": "time",
+      "description": "Sum of actual playback time across all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+    },
+    {
+      "id": 565,
+      "name": "% Plays Abandoned",
+      "unit": "%",
+      "type": "percent",
+      "description": "Percentage of plays that were abandoned before reaching 95% of content playback."
+    },
+    {
+      "id": 501,
+      "name": "Daily Viewers (Title/Event Name)",
+      "type": "count",
+      "description": "Sum of unique viewers for a single title or event in a day."
+    },
+    {
+      "id": 502,
+      "name": "Viewer (Daily)",
+      "type": "count",
+      "description": "Total number of unique viewers for a given day."
+    },
+    {
+      "id": 503,
+      "name": "Visits per Viewer",
+      "type": "count",
+      "description": "Total number of visits to the media divided by the number of viewers"
+    },
+    {
+      "id": 504,
+      "name": "Plays per Viewer",
+      "unit": " ",
+      "type": "count",
+      "description": "Total number of plays divided by the number of viewers."
+    },
+    {
+      "id": 506,
+      "name": "New Viewers",
+      "type": "count",
+      "description": "Total number of fresh viewers that have not viewed any content for a 13-month duration after report pack configuration, or prior to viewing the current play."
+    },
+    {
+      "id": 508,
+      "name": "Visits Ended",
+      "type": "count",
+      "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+    },
+    {
+      "id": 573,
+      "name": "Rebuffer Time per Minute",
+      "unit": "secs",
+      "type": "time",
+      "description": "Time spent rebuffering per minute of playback."
+    },
+    {
+      "id": 510,
+      "name": "Attempts",
+      "type": "count",
+      "description": "Total number of attempts to play content."
+    },
+    {
+      "id": 574,
+      "name": "Rebuffers per Minute",
+      "type": "count",
+      "description": "Total number of rebuffers for all plays per minute of playback."
+    },
+    {
+      "id": 511,
+      "name": "Plays",
+      "type": "count",
+      "description": "Number of attempts to play content that resulted in successful playback."
+    },
+    {
+      "id": 575,
+      "name": "Startup Abandons",
+      "type": "count",
+      "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+    }
+  ]
+}

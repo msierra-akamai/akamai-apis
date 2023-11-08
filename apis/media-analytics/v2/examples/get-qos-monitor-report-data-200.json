@@ -1,0 +1,46 @@
+{
+  "rows": [
+    [
+      "GB",
+      "WA",
+      "18.15"
+    ],
+    [
+      "GB",
+      "EN",
+      "16.74"
+    ],
+    [
+      "GB",
+      "NI",
+      "66.06"
+    ]
+  ],
+  "metaData": {
+    "limit": 3,
+    "endTimeInEpoch": 1392598800,
+    "startTimeInEpoch": 1392595200,
+    "timeZone": "EST",
+    "hasMoreData": false,
+    "offset": 0,
+    "reportPack": "Sample QoS Monitor Report Pack",
+    "aggregation": "3600"
+  },
+  "columns": [
+    {
+      "name": "Country",
+      "aggregate": "-",
+      "index": 0
+    },
+    {
+      "name": "Region",
+      "aggregate": "-",
+      "index": 1
+    },
+    {
+      "name": "% Rebuffering Plays",
+      "aggregate": "20.06",
+      "index": 2
+    }
+  ]
+}

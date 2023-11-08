@@ -1,0 +1,3464 @@
+[
+  {
+    "id": 2466,
+    "name": "Audience Analytics Time Cube",
+    "type": "standard",
+    "description": "time cube for AA 2.",
+    "aggregationInSeconds": 3600,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Total number of play attempts that ended before the start of playback due to errors."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until  navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 2000,
+        "name": "Hourly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given hour."
+      },
+      {
+        "id": 657,
+        "name": "% Rebuffering Plays (Avg)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of sessions that experienced rebuffers. Calculated as the ratio of number of sessions rebuffering at least once to the total number of active sessions. You can plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. Use with other behavioral metrics like `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 2001,
+        "name": "Weekly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given week."
+      },
+      {
+        "id": 2002,
+        "name": "Monthly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given month."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 2003,
+        "name": "Quarterly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given quarter."
+      },
+      {
+        "id": 2004,
+        "name": "Yearly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given year."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 159,
+        "name": "Play Duration per Play",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the number of plays."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Total play duration divided by the number of visits."
+      },
+      {
+        "id": 622,
+        "name": "Average Rebuffer Time per Play",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average time spent on rebuffering during each play."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Total number of plays that did not start due to errors."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of actual playback time of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 117,
+        "name": "Audience Size",
+        "type": "count",
+        "description": "Sum of concurrent streams or plays at a specific time. It can be used in all charts, except time, to show audience size for a chosen duration."
+      },
+      {
+        "id": 502,
+        "name": "Viewer (Daily)",
+        "type": "count",
+        "description": "Total number of unique viewers for a given day calculated using a globally unique identifier configured in the client-side media analytics plug-in."
+      },
+      {
+        "id": 504,
+        "name": "Plays per Viewer",
+        "type": "count",
+        "description": "Total number of plays divided by the number of viewers. The viewers metric is available in these granularities: hour, day, week, month, quarter, and year."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Total number of attempts to play content."
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      }
+    ]
+  },
+  {
+    "id": 402,
+    "name": "audience_ad_cube",
+    "type": "standard",
+    "description": "Audience analytics ad cube.",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension name in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 963,
+        "name": "Ad Server",
+        "description": "Host serving the advertisements. You can measure the performance of your ad servers by plotting ad and quality metrics by this dimension.",
+        "type": "standard"
+      },
+      {
+        "id": 964,
+        "name": "Ad Industry Category",
+        "description": "Industry category of advertising content. Plot the dimension with ad metrics and location to analyze the efficacy of your ad targeting. You may want to reconsider your targeting strategy for an ad vertical in a specific location if `Starts` and `Abandons` numbers for it is particularly high.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 965,
+        "name": "Ad Duration",
+        "description": "Duration of an advertisement. The 5 ranges for ad duration are: 0-5s, 5-10s, 10-15s, 15-30s, 30s+. You can plot `Ad Starts`, `Ad Abandons`, `Ad Abandonment Rate`, and other ad metrics by duration to understand how the length of an ad affects audience size and abandonment rates.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 966,
+        "name": "Ad Title",
+        "description": "Name or title of the advertisement. Use the field to understand audience behavior with regards to specific ad titles.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 968,
+        "name": "Ad Placement",
+        "description": "Indicates if the ad is a pre-roll, mid-roll, or a post-roll. Plot ad metrics by this dimension to understand the efficacy of your ad packaging strategy. You could consider removing pre-rolls from clips if you notice a high `Abandonment Rate` for clips versus full length content.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 969,
+        "name": "Ad Play%",
+        "description": "Percentage of advertisement viewed. This dimension is automatically set with 5 ranges of play percentages: Less than 25%, 25-49%, 50-74%, 75 - 99%, and 100%. You can plot it with ad metrics to determine the point of ad playback at which viewers abandoned the media.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 704,
+        "name": "Ad Abandons",
+        "type": "count",
+        "description": "Total number of ad plays abandoned before 100% completion."
+      },
+      {
+        "id": 705,
+        "name": "Ad completed",
+        "type": "count",
+        "description": "Sum of ad plays that played back completely."
+      },
+      {
+        "id": 706,
+        "name": "Ad play duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Sum of play duration of all ad plays."
+      },
+      {
+        "id": 707,
+        "name": "Average Ad Play Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Average play duration per ad play."
+      },
+      {
+        "id": 708,
+        "name": "Ad Start Up Time (Avg)",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average start up time across all ad plays. Start up time is the sum of connect and initial buffer time, in seconds."
+      },
+      {
+        "id": 709,
+        "name": "Ad Play Errors",
+        "type": "count",
+        "description": "Sum of ad play attempts that did not play due to errors."
+      },
+      {
+        "id": 712,
+        "name": "Ad Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Duration of an advertisement. The 5 ranges for ad duration are: 0-5s, 5-10s, 10-15s, 15-30s, 30s+. You can plot `Ad Starts`, `Ad Abandons`, `Ad Abandonment Rate`, and other ad metrics by duration to understand how the length of an ad affects audience size and abandonment rates."
+      },
+      {
+        "id": 701,
+        "name": "% Ads Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of ad playbacks abandoned prior to 100% completion."
+      },
+      {
+        "id": 702,
+        "name": "Ad Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage for all ads played. It is indicative of the proportion of ad watched when plotted with dimensions such as `Ad Placement`."
+      },
+      {
+        "id": 703,
+        "name": "Ad Plays",
+        "type": "count",
+        "description": "Sum of ad play attempts that resulted in successful start of playback."
+      }
+    ]
+  },
+  {
+    "id": 130,
+    "name": "audience_ad_title_cube",
+    "type": "standard",
+    "description": "Audience Analytics Title_AD Cube",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 60,
+    "maxQueryDurationInMinutes": 86400,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 963,
+        "name": "Ad Server",
+        "description": "Host serving the advertisements. You can measure the performance of your ad servers by plotting ad and quality metrics by this dimension.",
+        "type": "standard"
+      },
+      {
+        "id": 964,
+        "name": "Ad Industry Category",
+        "description": "Industry category of advertising content. Plot the dimension with ad metrics and location to analyze the efficacy of your ad targeting. You may want to reconsider your targeting strategy for an ad vertical in a specific location if `Starts` and `Abandons` numbers for it is particularly high.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 965,
+        "name": "Ad Duration",
+        "description": "Duration of an advertisement. The 5 ranges for ad duration are: 0-5s, 5-10s, 10-15s, 15-30s, 30s+. You can plot `Ad Starts`, `Ad Abandons`, `Ad Abandonment Rate`, and other ad metrics by duration to understand how the length of an ad affects audience size and abandonment rates.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 966,
+        "name": "Ad Title",
+        "description": "Name or title of the advertisement. Use the field to understand audience behavior with regards to specific ad titles.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 968,
+        "name": "Ad Placement",
+        "description": "Indicates if the ad is a pre-roll, mid-roll, or a post-roll. Plot ad metrics by this dimension to understand the efficacy of your ad packaging strategy. You could consider removing pre-rolls from clips if you notice a high `Abandonment Rate` for clips versus full length content",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 969,
+        "name": "Ad Play%",
+        "description": "Percentage of advertisement viewed. This dimension is automatically set with 5 ranges of play percentages: Less than 25%, 25-49%, 50-74%, 75 - 99%, and 100%. You can plot it with ad metrics to determine the point of ad playback at which viewers abandoned the media.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 184,
+        "name": "Title / Event Name",
+        "description": "Use `Title Name` for on-demand content, and `Event Name` for live events as values for this dimension. This is 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. Use fewer unique values to avoid too many return values.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 704,
+        "name": "Ad Abandons",
+        "type": "count",
+        "description": "Total number of ad plays abandoned before 100% completion."
+      },
+      {
+        "id": 705,
+        "name": "Ad completed",
+        "type": "count",
+        "description": "Sum of ad plays that played back completely."
+      },
+      {
+        "id": 706,
+        "name": "Ad play duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Sum of play duration of all ad plays."
+      },
+      {
+        "id": 707,
+        "name": "Average Ad Play Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Average play duration per ad play."
+      },
+      {
+        "id": 708,
+        "name": "Ad Start Up Time (Avg)",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average start up time across all ad plays. Start up time is the sum of connect and initial buffer time, in seconds."
+      },
+      {
+        "id": 709,
+        "name": "Ad Play Errors",
+        "type": "count",
+        "description": "Sum of ad play attempts that did not play due to errors."
+      },
+      {
+        "id": 712,
+        "name": "Ad Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Duration of an advertisement. The 5 ranges for ad duration are: 0-5s, 5-10s, 10-15s, 15-30s, 30s+. You can plot `Ad Starts`, `Ad Abandons`, `Ad Abandonment Rate`, and other ad metrics by duration to understand how the length of an ad affects audience size and abandonment rates."
+      },
+      {
+        "id": 701,
+        "name": "% Ads Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of ad playbacks abandoned prior to 100% completion."
+      },
+      {
+        "id": 702,
+        "name": "Ad Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage for all ads played. It is indicative of the proportion of ad watched when plotted with dimensions such as `Ad Placement`."
+      },
+      {
+        "id": 703,
+        "name": "Ad Plays",
+        "type": "count",
+        "description": "Sum of ad play attempts that resulted in successful start of playback."
+      }
+    ]
+  },
+  {
+    "id": 98,
+    "name": "cld_cube_15min",
+    "type": "standard",
+    "description": "Content LeaderBoard",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 160,
+        "name": "Bitrate",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it.",
+        "type": "standard"
+      },
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 9,
+        "name": "Format",
+        "description": "Set automatically to the encode and delivery format of the media.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To edit the dimension name on the Luna Control Center, in `Configure`, go to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 846,
+        "name": "AS Name",
+        "description": "Autonomous system name that identifies the internet network.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically and identifies the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 951,
+        "name": "Content Length",
+        "description": "Set values in this dimension with the range to which the content length belongs. The available range values are: 0-5s, 5-30s, 30s - 1min, 1min-5mins, 5mins-10mins, 10mins+.",
+        "type": "standard"
+      },
+      {
+        "id": 953,
+        "name": "ISP",
+        "description": "Set automatically to the ISP used by the viewer to view the content.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 530,
+        "name": "Plays (Bitrate Level)",
+        "type": "count",
+        "description": "Sum of plays for all plays at a specific bitrate. You can plot this metric with the bitrate dimension to identify bit rates used most, and leverage the information to select the ones to retain in the stack."
+      },
+      {
+        "id": 531,
+        "name": "Play Duration (Bitrate Level)",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of play durations for all plays at a specific bitrate. You can plot this metric with the bitrate dimension to identify bit rates used most, and leverage the information to select the ones to retain in the stack."
+      }
+    ]
+  },
+  {
+    "id": 97,
+    "name": "cld_cube_1day",
+    "type": "standard",
+    "description": "Content Leaderboard",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 184,
+        "name": "Title / Event Name",
+        "description": "Use `Title Name` for on-demand content, and `Event Name` for live events as values for this dimension. This is 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. Use fewer unique values to avoid too many return values.",
+        "type": "standard"
+      },
+      {
+        "id": 156,
+        "name": "Stream Position",
+        "description": "Set automatically to indicate the playhead in seconds; one value for every second in the stream for the length of the content.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 533,
+        "name": "Plays Ended (Play Position Level)",
+        "type": "count",
+        "description": "Sum of plays that ended at a specific stream position. Plot the metric only with the `Stream Position` dimension to identify abandonments at different positions."
+      }
+    ]
+  },
+  {
+    "id": 95,
+    "name": "cube_br_level1",
+    "type": "standard",
+    "description": "cube_br_level1",
+    "aggregationInSeconds": 3600,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 513,
+        "name": "Plays Completed",
+        "type": "count",
+        "description": "Plays that reach 95% of content playback."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback due to errors."
+      },
+      {
+        "id": 515,
+        "name": "Plays with Rebuffers",
+        "type": "count",
+        "description": "Sum of plays with at least one rebuffering event."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 517,
+        "name": "Completion Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays that lasted over 95% of the stream duration."
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 2000,
+        "name": "Hourly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given hour."
+      },
+      {
+        "id": 2001,
+        "name": "Weekly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given week."
+      },
+      {
+        "id": 2002,
+        "name": "Monthly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given month."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 2003,
+        "name": "Quarterly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given quarter."
+      },
+      {
+        "id": 2004,
+        "name": "Yearly Viewers",
+        "type": "count",
+        "description": "Sum of unique viewers for a given year."
+      },
+      {
+        "id": 538,
+        "name": "Plays per Viewer (Daily)",
+        "type": "count",
+        "description": "Total number of plays divided by the number of daily viewers. This metric is available in the following granularities: hour, day, week, month, quarter, and year."
+      },
+      {
+        "id": 541,
+        "name": "Visits per Viewer (Daily)",
+        "type": "count",
+        "description": "Sum of visits for all viewers divided by the number of daily viewers."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits."
+      },
+      {
+        "id": 546,
+        "name": "Peeks",
+        "type": "count",
+        "description": "Sum of peeks; plays that lasted less than 5 seconds."
+      },
+      {
+        "id": 623,
+        "name": "24x7 Plays",
+        "type": "count",
+        "description": "Sum of first plays for a 24x7 stream. The metric also includes subsequent plays before user quits the session."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Sum of plays that did not start due to errors."
+      },
+      {
+        "id": 562,
+        "name": "Plays Abandoned",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of time of actual playback of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 565,
+        "name": "% Plays Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned prior to 95% completion. Use in on-demand scenarios only."
+      },
+      {
+        "id": 501,
+        "name": "Daily Viewers (Title/Event Name)",
+        "type": "count",
+        "description": "Sum of unique viewers per title or event name in a day calculated using a globally unique identifier set by the client-side media analytics plug-in. It is important to note that this metric is different from the `Viewers (Daily)` metric."
+      },
+      {
+        "id": 502,
+        "name": "Viewer (Daily)",
+        "type": "count",
+        "description": "Total number of unique viewers for a given day calculated using a globally unique identifier configured in the client-side media analytics plug-in."
+      },
+      {
+        "id": 503,
+        "name": "Visits per Viewer",
+        "type": "count",
+        "description": "Sum of visits by all viewers divided by the number of viewers."
+      },
+      {
+        "id": 504,
+        "name": "Plays per Viewer",
+        "unit": " ",
+        "type": "count",
+        "description": "Total number of plays divided by the number of viewers. The viewers metric is available in these granularities: hour, day, week, month, quarter, and year."
+      },
+      {
+        "id": 506,
+        "name": "New Viewers",
+        "type": "count",
+        "description": "Sum of never-seen-before viewers. New viewers are viewers who have not viewed any titles in the 13-month duration after the creation of the report pack, and preceding the most current play."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Sum of attempts to play back content (title/main stream)"
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      }
+    ]
+  },
+  {
+    "id": 99,
+    "name": "cube_br_startup_error",
+    "type": "standard",
+    "description": "cube_br_startup_error",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 842,
+        "name": "Ad Density(Visit Level)",
+        "description": "Ad density experienced during an entire visit.  Ad density equals the amount of time spent watching ads divided by the amount of time watching content. This dimension is automatically set to one of the following ranges: 0%, 0-1%, 1-5%, 5-10%, 10+.  Use this field to understand how ad density influences a rise in abandonment rates and utilize the insights to optimize your ad policy.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 843,
+        "name": "Rebuffer Time Per Visit",
+        "description": "Average time spent rebuffering across all visits. Set automatically to one of the following ranges: 0s, 0-0.5s, 0.5s-1s, 1-2s, 2-5s, 5-10s, 10-30s, 30s - 1m, 1-2m, 2-5m, 5-10m, 10m+.  This field helps you analyze how increased rebuffer time raises abandonment rates and lowers play duration.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 844,
+        "name": "Rebuffers Per Visit",
+        "description": "Sum of rebuffers across all visits. Set automatically to one of the following ranges: <2, 2-5, 5-10, 10-20, 20-50, 50+.  Use this field to understand how increased rebuffers per visit raise abandonment rates and lowers play duration.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 848,
+        "name": "Rebuffer Time Per Minute  (Visit)",
+        "description": "Total rebuffering time divided by total time watching the content + rebuffering multiplied by 60. This dimension is automatically set to one of the following ranges: 0s, 0- 2s, 2-5s, 5-10s, 10-20s, 20-30s, 30s+. An increase in values for this field could lead to higher abandonment rates and lower play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 945,
+        "name": "Referral Url",
+        "description": "Referrer that directed the viewer to your site/content. The values help in understanding how your content is accessed and measures the efficacy of marketing tactics used to drive traffic to your site/content.",
+        "type": "standard"
+      },
+      {
+        "id": 946,
+        "name": "StartUp Errors Per Visit",
+        "description": "Number of startup errors experienced during a visit. Plot `Plays per Visit` metric with this dimension to analyze the effects of errors on audience behavior.",
+        "type": "standard"
+      },
+      {
+        "id": 956,
+        "name": "Max Bitrate (Visit)",
+        "description": "Set automatically to one of the following ranges: 0-500K, 500K - 1000K, 1000K - 1500K, 1500K-2500K, 2000K-2500K, 2500K-3000K+,3000K-3500K, 3500K+ based on the maximum bit rate at which viewer viewed media during an entire visit.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 624,
+        "name": "Visit Plays",
+        "type": "count",
+        "description": "Sum of 5-second plays captured in visit level."
+      },
+      {
+        "id": 625,
+        "name": "Plays (Visit Level)",
+        "type": "count",
+        "description": "Sum of plays available for plotting with visit-level dimensions."
+      },
+      {
+        "id": 626,
+        "name": "Plays Per Visit (Visit Level)",
+        "type": "count",
+        "description": "Plays divided by visits. Only applicable to visit-level dimensions."
+      },
+      {
+        "id": 566,
+        "name": "Play Duration per Visit (Visit Level)",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits. Only applicable to visit-level dimensions."
+      },
+      {
+        "id": 615,
+        "name": "Ad Plays (Visit Level)",
+        "type": "count",
+        "description": "Sum of ad plays available for plotting with visit-level dimensions."
+      },
+      {
+        "id": 616,
+        "name": "Ad Abandons (Visit Level)",
+        "type": "count",
+        "description": "Total number of ad abandons available for plotting with visit-level dimensions."
+      },
+      {
+        "id": 617,
+        "name": "% Ad Abandons (Visit Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of sessions abandoned during ad playback."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      }
+    ]
+  },
+  {
+    "id": 94,
+    "name": "cube_br_viewer_title",
+    "type": "standard",
+    "description": "cube_br_viewer_title",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 184,
+        "name": "Title / Event Name",
+        "description": "Use `Title Name` for on-demand content, and `Event Name` for live events as values for this dimension. This is 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. Use fewer unique values to avoid too many return values.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 513,
+        "name": "Plays Completed",
+        "type": "count",
+        "description": "Plays that reach 95% of content playback."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback due to errors."
+      },
+      {
+        "id": 515,
+        "name": "Plays with Rebuffers",
+        "type": "count",
+        "description": "Sum of plays with at least one rebuffering event."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 517,
+        "name": "Completion Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays that lasted over 95% of the stream duration."
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 538,
+        "name": "Plays per Viewer (Daily)",
+        "type": "count",
+        "description": "Total number of plays divided by the number of daily viewers. This metric is available in the following granularities: hour, day, week, month, quarter, and year."
+      },
+      {
+        "id": 541,
+        "name": "Visits per Viewer (Daily)",
+        "type": "count",
+        "description": "Sum of visits for all viewers divided by the number of daily viewers."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits."
+      },
+      {
+        "id": 546,
+        "name": "Peeks",
+        "type": "count",
+        "description": "Sum of peeks; plays that lasted less than 5 seconds."
+      },
+      {
+        "id": 623,
+        "name": "24x7 Plays",
+        "type": "count",
+        "description": "Sum of first plays for a 24x7 stream. The metric also includes subsequent plays before user quits the session."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Sum of plays that did not start due to errors."
+      },
+      {
+        "id": 562,
+        "name": "Plays Abandoned",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of time of actual playback of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 565,
+        "name": "% Plays Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned prior to 95% completion. Use in on-demand scenarios only."
+      },
+      {
+        "id": 501,
+        "name": "Daily Viewers (Title/Event Name)",
+        "type": "count",
+        "description": "Sum of unique viewers per title or event name in a day calculated using a globally unique identifier set by the client-side media analytics plug-in. It is important to note that this metric is different from the `Viewers (Daily)` metric."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Sum of attempts to play back content (title/main stream)."
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      }
+    ]
+  },
+  {
+    "id": 90,
+    "name": "led_cube_15min",
+    "type": "standard",
+    "description": "Live Event Dashboard",
+    "aggregationInSeconds": 900,
+    "purgeIntervalInDays": 8,
+    "maxQueryDurationInMinutes": 11520,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 9,
+        "name": "Format",
+        "description": "Set automatically to the encode and delivery format of the media.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 846,
+        "name": "AS Name",
+        "description": "Autonomous system name that identifies the internet network.",
+        "type": "standard"
+      },
+      {
+        "id": 157,
+        "name": "Error Code",
+        "description": "Set automatically indicating the error code that caused playback to stop.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically identifying the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 945,
+        "name": "Referral Url",
+        "description": "Referrer that directed the viewer to your site/content. The values help in understanding how your content is accessed and measures the efficacy of marketing tactics used to drive traffic to your site/content.",
+        "type": "standard"
+      },
+      {
+        "id": 947,
+        "name": "StartUp Time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 951,
+        "name": "Content Length",
+        "description": "Set values in this dimension with the range to which the content length belongs. The available range values are: 0-5s, 5-30s, 30s - 1min, 1min-5mins, 5mins-10mins, 10mins+.",
+        "type": "standard"
+      },
+      {
+        "id": 953,
+        "name": "ISP",
+        "description": "Set automatically to the ISP used by the viewer to view the content.",
+        "type": "standard"
+      },
+      {
+        "id": 957,
+        "name": "Player Id",
+        "description": "Name and version of the player. Use no more than 30 values or this field is not very useful.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 513,
+        "name": "Plays Completed",
+        "type": "count",
+        "description": "Plays that reach 95% of content playback."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback due to errors."
+      },
+      {
+        "id": 515,
+        "name": "Plays with Rebuffers",
+        "type": "count",
+        "description": "Sum of plays with at least one rebuffering event."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 517,
+        "name": "Completion Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays that lasted over 95% of the stream duration."
+      },
+      {
+        "id": 657,
+        "name": "% Rebuffering Plays (Avg)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of sessions that experienced rebuffers. Calculated as the ratio of number of sessions rebuffering at least once to the total number of active sessions. You can plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. Use with other behavioral metrics like `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 155,
+        "name": "% Rebuffering Plays",
+        "unit": "%",
+        "type": "percent",
+        "description": "Ratio of number of plays rebuffering at least once to the total number of active plays. Plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. You can also use it with behavioral metrics such as `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 159,
+        "name": "Play Duration per Play",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of plays."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits."
+      },
+      {
+        "id": 546,
+        "name": "Peeks",
+        "type": "count",
+        "description": "Sum of peeks; plays that lasted less than 5 seconds."
+      },
+      {
+        "id": 562,
+        "name": "Plays Abandoned",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of time of actual playback of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 565,
+        "name": "% Plays Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned prior to 95% completion. Use in on-demand scenarios only."
+      },
+      {
+        "id": 566,
+        "name": "Play Duration per Visit (Visit Level)",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits. Only applicable to visit-level dimensions."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      },
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 710,
+        "name": "Rebuffer Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned during a rebuffering event"
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 74,
+        "name": "Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback and mid-play due to errors."
+      },
+      {
+        "id": 80,
+        "name": "Bandwidth",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average overall bandwidth experienced by end users"
+      },
+      {
+        "id": 81,
+        "name": "Frames per Second",
+        "type": "count",
+        "description": "Average frames per second of the video experienced by end-users for the chosen dimension."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 85,
+        "name": "Bitrate Upshifts",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate upshift per session"
+      },
+      {
+        "id": 86,
+        "name": "Bitrate Downshift",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate downshift per session"
+      },
+      {
+        "id": 608,
+        "name": "Ad Plays (Play Level)",
+        "type": "count",
+        "description": "Sum of Ads that started. Available to plot with play-level bucketed dimensions."
+      },
+      {
+        "id": 609,
+        "name": "Plays with Ad Abandons",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 610,
+        "name": "% Ad Abandons (Play Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned during ad playback."
+      },
+      {
+        "id": 611,
+        "name": "Ad Density (Play Level)",
+        "type": "count",
+        "description": "Ad play time divided by content play time. Plotted with play-level dimensions. Use this field to understand how ad density varies across content categories, titles, geographies, and time so you can closely control your ad policy."
+      },
+      {
+        "id": 102,
+        "name": "Bitrate (Avg)",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 621,
+        "name": "Reserved Metric",
+        "type": "count",
+        "description": "Future Use"
+      },
+      {
+        "id": 622,
+        "name": "Average Rebuffer Time per Play",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average time spent on rebuffering per play"
+      },
+      {
+        "id": 110,
+        "name": "Dropped Frames",
+        "type": "count",
+        "description": "Average number of dropped frames per play."
+      },
+      {
+        "id": 623,
+        "name": "24x7 Plays",
+        "type": "count",
+        "description": "Sum of first plays for a 24x7 stream. The metric also includes subsequent plays before user quits the session."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Sum of plays that did not start due to errors."
+      },
+      {
+        "id": 112,
+        "name": "Average Connect Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to connect to the server for a single play attempt."
+      },
+      {
+        "id": 113,
+        "name": "Average Initial Buffer Time ",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to fill the initial buffer for a single play attempt."
+      },
+      {
+        "id": 117,
+        "name": "Audience Size",
+        "type": "count",
+        "description": "Sum of concurrent streams or plays at a particular point in time. Not an aggregated value like Attempts or Plays."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Sum of attempts to play back content (title/main stream)"
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      }
+    ]
+  },
+  {
+    "id": 112,
+    "name": "led_cube_1d",
+    "type": "standard",
+    "description": "Live Event Dashboard",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 90,
+    "maxQueryDurationInMinutes": 129600,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 833,
+        "name": "Stream Name",
+        "description": "Set automatically and indicates the Stream URL.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically and identifies the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. Set the dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 184,
+        "name": "Title / Event Name",
+        "description": "Use `Title Name` for on-demand content, and `Event Name` for live events as values for this dimension. This is 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. Use fewer unique values to avoid too many return values.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 513,
+        "name": "Plays Completed",
+        "type": "count",
+        "description": "Plays that reach 95% of content playback."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback due to errors."
+      },
+      {
+        "id": 515,
+        "name": "Plays with Rebuffers",
+        "type": "count",
+        "description": "Sum of plays with at least one rebuffering event."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 517,
+        "name": "Completion Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays that lasted over 95% of the stream duration."
+      },
+      {
+        "id": 657,
+        "name": "% Rebuffering Plays (Avg)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of sessions that experienced rebuffers. Calculated as the ratio of number of sessions rebuffering at least once to the total number of active sessions. You can plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. Use with other behavioral metrics like `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 155,
+        "name": "% Rebuffering Plays",
+        "unit": "%",
+        "type": "percent",
+        "description": "Ratio of number of plays rebuffering at least once to the total number of active plays. Plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. You can also use it with behavioral metrics such as `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 159,
+        "name": "Play Duration per Play",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of plays."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits."
+      },
+      {
+        "id": 546,
+        "name": "Peeks",
+        "type": "count",
+        "description": "Sum of peeks; plays that lasted less than 5 seconds."
+      },
+      {
+        "id": 562,
+        "name": "Plays Abandoned",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of time of actual playback of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 565,
+        "name": "% Plays Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned prior to 95% completion. Use in on-demand scenarios only."
+      },
+      {
+        "id": 566,
+        "name": "Play Duration per Visit (Visit Level)",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits. Only applicable to visit-level dimensions."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      },
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 710,
+        "name": "Rebuffer Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned during a rebuffering event"
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 74,
+        "name": "Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback and mid-play due to errors."
+      },
+      {
+        "id": 80,
+        "name": "Bandwidth",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average overall bandwidth experienced by end users"
+      },
+      {
+        "id": 81,
+        "name": "Frames per Second",
+        "type": "count",
+        "description": "Average frames per second of the video experienced by end-users for the chosen dimension."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 85,
+        "name": "Bitrate Upshifts",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate upshift per session"
+      },
+      {
+        "id": 86,
+        "name": "Bitrate Downshift",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate downshift per session"
+      },
+      {
+        "id": 608,
+        "name": "Ad Plays (Play Level)",
+        "type": "count",
+        "description": "Sum of ads that started. Available to plot with play-level bucketed dimensions."
+      },
+      {
+        "id": 609,
+        "name": "Plays with Ad Abandons",
+        "type": "count",
+        "description": "Total number of plays abandoned during ad playback."
+      },
+      {
+        "id": 610,
+        "name": "% Ad Abandons (Play Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned during ad playback."
+      },
+      {
+        "id": 611,
+        "name": "Ad Density (Play Level)",
+        "type": "count",
+        "description": "Ad play time divided by content play time. Plot with play-level dimensions. Use this field to understand how ad density varies across content categories, titles, geographies, and time so you can closely control your ad policy."
+      },
+      {
+        "id": 102,
+        "name": "Bitrate (Avg)",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 621,
+        "name": "Reserved Metric",
+        "type": "count",
+        "description": "Future Use"
+      },
+      {
+        "id": 622,
+        "name": "Average Rebuffer Time per Play",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average time spent on rebuffering per play"
+      },
+      {
+        "id": 110,
+        "name": "Dropped Frames",
+        "type": "count",
+        "description": "Average number of dropped frames per play."
+      },
+      {
+        "id": 623,
+        "name": "24x7 Plays",
+        "type": "count",
+        "description": "Sum of first plays for a 24x7 stream. The metric also includes subsequent plays before user quits the session."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Sum of plays that did not start due to errors."
+      },
+      {
+        "id": 112,
+        "name": "Average Connect Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to connect to the server for a single play attempt."
+      },
+      {
+        "id": 113,
+        "name": "Average Initial Buffer Time ",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to fill the initial buffer for a single play attempt."
+      },
+      {
+        "id": 117,
+        "name": "Audience Size",
+        "type": "count",
+        "description": "Sum of concurrent streams or plays at a particular point in time. Not an aggregated value like `Attempts` or `Plays`."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Sum of attempts to play back content (title/main stream)."
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      }
+    ]
+  },
+  {
+    "id": 89,
+    "name": "led_cube_1day",
+    "type": "standard",
+    "description": "Live Events dashboard",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 9,
+        "name": "Format",
+        "description": "Set automatically to the encode and delivery format of the media.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 846,
+        "name": "AS Name",
+        "description": "Autonomous system name that identifies the internet network.",
+        "type": "standard"
+      },
+      {
+        "id": 157,
+        "name": "Error Code",
+        "description": "Set automatically and indicates the error code that caused playback to stop.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically and identifies the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 945,
+        "name": "Referral Url",
+        "description": "Referrer that directed the viewer to your site/content. The values help in understanding how your content is accessed and measures the efficacy of marketing tactics used to drive traffic to your site/content.",
+        "type": "standard"
+      },
+      {
+        "id": 947,
+        "name": "StartUp Time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 951,
+        "name": "Content Length",
+        "description": "Set values in this dimension with the range to which the content length belongs. The available range values are: 0-5s, 5-30s, 30s - 1min, 1min-5mins, 5mins-10mins, 10mins+.",
+        "type": "standard"
+      },
+      {
+        "id": 953,
+        "name": "ISP",
+        "description": "Set automatically to the ISP used by the viewer to view the content.",
+        "type": "standard"
+      },
+      {
+        "id": 957,
+        "name": "Player Id",
+        "description": "Name and version of the player. Use no more than 30 values or this field is not very useful.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 513,
+        "name": "Plays Completed",
+        "type": "count",
+        "description": "Plays that reach 95% of content playback."
+      },
+      {
+        "id": 514,
+        "name": "Plays with Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback due to errors."
+      },
+      {
+        "id": 515,
+        "name": "Plays with Rebuffers",
+        "type": "count",
+        "description": "Sum of plays with at least one rebuffering event."
+      },
+      {
+        "id": 516,
+        "name": "Play Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average play percentage of all playback derived by dividing `Play Duration` by `Content Length`. Valid for on-demand content only."
+      },
+      {
+        "id": 517,
+        "name": "Completion Percentage",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays that lasted over 95% of the stream duration."
+      },
+      {
+        "id": 657,
+        "name": "% Rebuffering Plays (Avg)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of sessions that experienced rebuffers. Calculated as the ratio of number of sessions rebuffering at least once to the total number of active sessions. You can plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. Use with other behavioral metrics like `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 155,
+        "name": "% Rebuffering Plays",
+        "unit": "%",
+        "type": "percent",
+        "description": "Ratio of number of plays rebuffering at least once to the total number of active plays. Plot this metric with content, ad, and geo dimensions to understand when rebuffering occurs most, and the size of audience it affects. You can also use it with behavioral metrics such as `Play Duration per Visit` and `Rebuffer Abandons`."
+      },
+      {
+        "id": 542,
+        "name": "Plays per Visit (Play Level)",
+        "unit": " ",
+        "type": "count",
+        "description": "Total plays divided by the number of visits."
+      },
+      {
+        "id": 159,
+        "name": "Play Duration per Play",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of plays."
+      },
+      {
+        "id": 544,
+        "name": "Play Duration per Visit",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits."
+      },
+      {
+        "id": 546,
+        "name": "Peeks",
+        "type": "count",
+        "description": "Sum of peeks; plays that lasted less than 5 seconds."
+      },
+      {
+        "id": 562,
+        "name": "Plays Abandoned",
+        "type": "count",
+        "description": "Plays that do not complete 95% of title during content playback."
+      },
+      {
+        "id": 563,
+        "name": "Play Duration",
+        "unit": "hours",
+        "type": "time",
+        "description": "Sum of time of actual playback of all plays. This excludes ad play duration, forwards, rewinds, repeat playback, and pauses."
+      },
+      {
+        "id": 565,
+        "name": "% Plays Abandoned",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned prior to 95% completion. Use in on-demand scenarios only."
+      },
+      {
+        "id": 566,
+        "name": "Play Duration per Visit (Visit Level)",
+        "unit": "mins",
+        "type": "time",
+        "description": "Play duration divided by the sum of visits. Only applicable to visit-level dimensions."
+      },
+      {
+        "id": 573,
+        "name": "Rebuffer Time per Minute",
+        "unit": "secs",
+        "type": "time",
+        "description": "Total time spent rebuffering per minute of playback."
+      },
+      {
+        "id": 574,
+        "name": "Rebuffers per Minute",
+        "type": "count",
+        "description": "Total number of rebuffers for all plays per minute of playback."
+      },
+      {
+        "id": 575,
+        "name": "Startup Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned before the initial buffer filling. Abandons can also occur as a result of user-initiated actions, and not wholly due to systemic or stream startup failures."
+      },
+      {
+        "id": 576,
+        "name": "Startup Abandonment Rate",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned by users before the initial buffer fill."
+      },
+      {
+        "id": 581,
+        "name": "Bitrate",
+        "unit": "Kbps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 710,
+        "name": "Rebuffer Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned during a rebuffering event"
+      },
+      {
+        "id": 582,
+        "name": "Visits",
+        "type": "count",
+        "description": "A viewer navigating to your site until she leaves it. For media, the default concept is loading or turning on a media player until navigation away from that media player. The visit definition can be altered at implementation to suit the specifics of your business."
+      },
+      {
+        "id": 583,
+        "name": "Availability",
+        "unit": "%",
+        "type": "percent",
+        "description": "Average availability for all play attempts (excluding user abandons). Calculated as the number of plays divided by plays + startup errors."
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      },
+      {
+        "id": 74,
+        "name": "Errors",
+        "type": "count",
+        "description": "Sum of play attempts that ended before start of playback and mid-play due to errors."
+      },
+      {
+        "id": 80,
+        "name": "Bandwidth",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average overall bandwidth experienced by end users"
+      },
+      {
+        "id": 81,
+        "name": "Frames per Second",
+        "type": "count",
+        "description": "Average frames per second of the video experienced by end users for the chosen dimension."
+      },
+      {
+        "id": 82,
+        "name": "Startup Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Automatically set to indicate the average time between the initial play attempt and the first rendered frame, in seconds. Values include; < 1s, 1-2s, 2-3s, 3-5s, 5-10s, 10s+. You can plot the startup abandonment rate metric with this dimension to understand the effects of start up delays on audience behavior."
+      },
+      {
+        "id": 85,
+        "name": "Bitrate Upshifts",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate upshift per session"
+      },
+      {
+        "id": 86,
+        "name": "Bitrate Downshift",
+        "type": "count",
+        "description": "Average number of times users experienced a bit rate downshift per session"
+      },
+      {
+        "id": 608,
+        "name": "Ad Plays (Play Level)",
+        "type": "count",
+        "description": "Sum of ads that started. Plot with play-level bucketed dimensions."
+      },
+      {
+        "id": 609,
+        "name": "Plays with Ad Abandons",
+        "type": "count",
+        "description": "Total number of plays abandoned during ad playback."
+      },
+      {
+        "id": 610,
+        "name": "% Ad Abandons (Play Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned during ad playback."
+      },
+      {
+        "id": 611,
+        "name": "Ad Density (Play Level)",
+        "type": "count",
+        "description": "Ad play time divided by content play time. Plot with play-level dimensions. Use this field to understand how ad density varies across content categories, titles, geographies, and time so you can closely control your ad policy."
+      },
+      {
+        "id": 102,
+        "name": "Bitrate (Avg)",
+        "unit": "bps",
+        "type": "bandwidth",
+        "description": "Average bitrate at which media is played back (kbps). Samples are calculated at regular time intervals during playback (~500ms). Plot `Bitrate Plays` and `Bitrate Play Duration` metrics with this dimension to view bit rates that maximize plays and play duration. Use the insight to streamline the bitrate stack, and add or remove bit rates depending on the engagement you gain or lose from it."
+      },
+      {
+        "id": 621,
+        "name": "Reserved Metric",
+        "type": "count",
+        "description": "Future Use"
+      },
+      {
+        "id": 622,
+        "name": "Average Rebuffer Time per Play",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average time spent on rebuffering per play."
+      },
+      {
+        "id": 110,
+        "name": "Dropped Frames",
+        "type": "count",
+        "description": "Average number of dropped frames per play."
+      },
+      {
+        "id": 623,
+        "name": "24x7 Plays",
+        "type": "count",
+        "description": "Sum of first plays for a 24x7 stream. The metric also includes subsequent plays before user quits the session."
+      },
+      {
+        "id": 111,
+        "name": "Startup Errors",
+        "type": "count",
+        "description": "Sum of plays that did not start due to errors."
+      },
+      {
+        "id": 112,
+        "name": "Average Connect Time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to connect to the server for a single play attempt."
+      },
+      {
+        "id": 113,
+        "name": "Average Initial Buffer Time ",
+        "unit": "secs",
+        "type": "time",
+        "description": "Average amount of time taken to fill the initial buffer for a single play attempt."
+      },
+      {
+        "id": 117,
+        "name": "Audience Size",
+        "type": "count",
+        "description": "Sum of concurrent streams or plays at a particular point in time. Not an aggregated value like `Attempts` or `Plays`."
+      },
+      {
+        "id": 508,
+        "name": "Visits Ended",
+        "type": "count",
+        "description": "Total number of visits to the media that ended. This number may not match with the number of `Visits` as a result of cases such as complete loss of network connectivity during a visit, thus preventing Media Analytics from receiving `Visit End` beacons."
+      },
+      {
+        "id": 510,
+        "name": "Attempts",
+        "type": "count",
+        "description": "Sum of attempts to play back content (title/main stream)."
+      },
+      {
+        "id": 511,
+        "name": "Plays",
+        "type": "count",
+        "description": "Number of attempts to play content that resulted in successful playback."
+      }
+    ]
+  },
+  {
+    "id": 92,
+    "name": "led_cube_bucketed_15min",
+    "type": "standard",
+    "description": "Live Event Dashboard",
+    "aggregationInSeconds": 900,
+    "purgeIntervalInDays": 8,
+    "maxQueryDurationInMinutes": 11520,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 835,
+        "name": "Rebuffer Time Per Play",
+        "description": "Total rebuffering time across all plays. This dimension is automatically set to one of the following ranges: 0s, 0-0.5s, 0.5s-1s, 1-2s, 2-5s, 5-10s, 10-30s, 30s - 1min, 1-2 mins, 2-5 mins, 5-10 mins, 10 mins+.  An increase in values for this field could lead to higher abandonment rates and lower play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 836,
+        "name": "Rebuffers Per Play",
+        "description": "Sum of rebuffers across all play set automatically to one of the following ranges;< 2, 2-5, 5-10, 10-20,20-50, 50+.  Use this field to understand how an increase in rebuffers per play raises abandonment rates and lowers play duration.",
+        "type": "standard"
+      },
+      {
+        "id": 837,
+        "name": "Rebuffers Per Minute (Play)",
+        "description": "Rebuffers divided by play duration set automatically to one of the following ranges: < 1, 1-3, 3-5, 5-10,10+.  With values for the playback experience of a single title and averages across all titles, you can use this field to understand how an increase in rebuffer frequency affects abandonment rates and play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 838,
+        "name": "Ad Density(Play Level)",
+        "description": "Ad density experienced during playback of a single title. Ad density equals the amount of time spent watching ads divided by the amount of time watching content. This dimension is automatically set to one of the following ranges: 0%, 0-1%, 1-5%, 5-10%, 10+. Use this field to determine how ad density influences abandonment rates and to utilize the insights to optimize your ad policy.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 840,
+        "name": "Rebuffer Time Per Minute (Play)",
+        "description": "For a single title playback, total rebuffering time divided by total time watching the content + rebuffering multiplied by 60. This dimension is automatically set to one of the following ranges: 0s, 0- 2s, 2-5s, 5-10s, 10-20s, 20-30s, 30s+. An increase in values for this field could lead to higher abandonment rates and lower play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 9,
+        "name": "Format",
+        "description": "Set automatically to the encode and delivery format of the media.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 845,
+        "name": "Play Duration Per Play",
+        "description": "Total play duration for a play. This excludes forwards, rewinds, repeat playback, and pauses. The following ranges are available: 0-1min, 1-5mins, 5-30mins, 30mins-1hr, 1hr+",
+        "type": "standard"
+      },
+      {
+        "id": 846,
+        "name": "AS Name",
+        "description": "Autonomous system name that identifies the internet network.",
+        "type": "standard"
+      },
+      {
+        "id": 157,
+        "name": "Error Code",
+        "description": "Set automatically and indicates the error code that caused playback to stop.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically and identifies the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 945,
+        "name": "Referral Url",
+        "description": "Referrer that directed the viewer to your site/content. The values help in understanding how your content is accessed and measures the efficacy of marketing tactics used to drive traffic to your site/content.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 953,
+        "name": "ISP",
+        "description": "Set automatically to the ISP used by the viewer to view the content.",
+        "type": "standard"
+      },
+      {
+        "id": 957,
+        "name": "Player Id",
+        "description": "Name and version of the player. Use no more than 30 values or this field is not very useful.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      },
+      {
+        "id": 959,
+        "name": "Max Bitrate (Play)",
+        "description": "Set automatically to one of the following ranges: 0-550K, 550K - 700K, 700K, 1000K, 1000K - 1500K, 1500K-2500K, 2500K+ based on the maximum bit rate at which viewer viewed media during playback of a single title.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 608,
+        "name": "Ad Plays (Play Level)",
+        "type": "count",
+        "description": "Sum of ads that started. Available to plot with play-level bucketed dimensions."
+      },
+      {
+        "id": 609,
+        "name": "Plays with Ad Abandons",
+        "type": "count",
+        "description": "Total number of ads abandoned during media playback."
+      },
+      {
+        "id": 610,
+        "name": "% Ad Abandons (Play Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned during ad playback."
+      },
+      {
+        "id": 611,
+        "name": "Ad Density (Play Level)",
+        "type": "count",
+        "description": "Ad play time divided by content play time. Plot with play-level dimensions. Use this field to understand how ad density varies across content categories, titles, geographies, and time so you can closely control your ad policy."
+      },
+      {
+        "id": 612,
+        "name": "Total Play Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Sum of play duration of all plays, in seconds."
+      },
+      {
+        "id": 613,
+        "name": "Total Rebuffer time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Sum of time spent rebuffering across all plays"
+      },
+      {
+        "id": 710,
+        "name": "Rebuffer Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned during a rebuffering event"
+      },
+      {
+        "id": 614,
+        "name": "Total Rebuffer Count",
+        "type": "count",
+        "description": "Sum of rebuffers across all plays"
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      }
+    ]
+  },
+  {
+    "id": 91,
+    "name": "led_cube_bucketed_1day",
+    "type": "standard",
+    "description": "Live Event Dashboard",
+    "aggregationInSeconds": 86400,
+    "purgeIntervalInDays": 403,
+    "maxQueryDurationInMinutes": 580320,
+    "dimensions": [
+      {
+        "id": 960,
+        "name": "Custom Viewer 1",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 2,
+        "name": "Continent",
+        "description": "Set to viewer's continent based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 835,
+        "name": "Rebuffer Time Per Play",
+        "description": "Total rebuffering time across all plays. This dimension is automatically set to one of the following ranges: 0s, 0-0.5s, 0.5s-1s, 1-2s, 2-5s, 5-10s, 10-30s, 30s - 1min, 1-2 mins, 2-5 mins, 5-10 mins, 10 mins+.  An increase in values for this field could lead to higher abandonment rates and lower play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 4,
+        "name": "Country",
+        "description": "Set to viewer's country based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 836,
+        "name": "Rebuffers Per Play",
+        "description": "Sum of rebuffers across all plays set automatically to one of the following ranges: < 2, 2-5, 5-10, 10-20, 20-50, 50+.  Use this field to understand how an increase in rebuffers per play raises abandonment rates and lowers play duration.",
+        "type": "standard"
+      },
+      {
+        "id": 837,
+        "name": "Rebuffers Per Minute (Play)",
+        "description": "Rebuffers divided by play duration set automatically to one of the following ranges: < 1, 1-3, 3-5, 5-10, 10+.  With values for the playback experience of a single title and averages across all titles, you can use this field to understand how an increase in rebuffer frequency affects abandonment rates and play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 5,
+        "name": "Region",
+        "description": "Set to the viewer's state (US only), or region based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 838,
+        "name": "Ad Density(Play Level)",
+        "description": "Ad density experienced during playback of a single title. Ad density equals the amount of time spent watching ads divided by the amount of time watching content. This dimension is automatically set to one of the following ranges: 0%, 0-1%, 1-5%, 5-10%, 10+. Use this field to determine how ad density influences abandonment rates and to utilize the insights to optimize your ad policy.",
+        "type": "standard"
+      },
+      {
+        "id": 6,
+        "name": "City",
+        "description": "Set to viewer's city based on mapping of the viewer's IP address to their location by the Akamai EdgeScape service.",
+        "type": "standard"
+      },
+      {
+        "id": 8,
+        "name": "Connection Speed",
+        "description": "Automatically set to the viewer's connection speed based on the client IP address using Akamai EdgeScape service. The field has the following ranged values: 1-256K, 256K - 1000K, 1000K - 2000k, 2000K-5000K, 5000K+.",
+        "type": "standard"
+      },
+      {
+        "id": 840,
+        "name": "Rebuffer Time Per Minute (Play)",
+        "description": "For a single title playback, total rebuffering time divided by total time watching the content + rebuffering multiplied by 60. This dimension is automatically set to one of the following ranges: 0s, 0- 2s, 2-5s, 5-10s, 10-20s, 20-30s, 30s+. An increase in values for this field could lead to higher abandonment rates and lower play durations.",
+        "type": "standard"
+      },
+      {
+        "id": 9,
+        "name": "Format",
+        "description": "Set automatically to the encode and delivery format of the media.",
+        "type": "standard"
+      },
+      {
+        "id": 12,
+        "name": "Time",
+        "description": "Reports the time at which viewer consumed content in time zone set during report pack creation.",
+        "type": "standard"
+      },
+      {
+        "id": 845,
+        "name": "Play Duration Per Play",
+        "description": "Total play duration for a play. This excludes forwards, rewinds, repeat playback, and pauses. The following ranges are available: 0-1min, 1-5mins, 5-30mins, 30mins-1hr, 1hr+",
+        "type": "standard"
+      },
+      {
+        "id": 846,
+        "name": "AS Name",
+        "description": "Autonomous system name that identifies the internet network.",
+        "type": "standard"
+      },
+      {
+        "id": 157,
+        "name": "Error Code",
+        "description": "Set automatically and indicates the error code that caused playback to stop.",
+        "type": "standard"
+      },
+      {
+        "id": 931,
+        "name": "Os",
+        "description": "Set automatically to the operating system of the device used by the viewer.",
+        "type": "standard"
+      },
+      {
+        "id": 932,
+        "name": "Device",
+        "description": "Device that played the media. For example, mobile phone, tablet, or desktop. Use fewer than 10 values or the dimension reports too many values to provide helpful insights.",
+        "type": "standard"
+      },
+      {
+        "id": 936,
+        "name": "custom_Viewer 2",
+        "description": "Placeholder for a custom dimension that captures data at the viewer level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the viewer level.",
+        "type": "standard"
+      },
+      {
+        "id": 938,
+        "name": "custom_Visit 1",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 939,
+        "name": "custom_Visit 2",
+        "description": "Placeholder for a custom dimension that captures data at the visit level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the visit level.",
+        "type": "standard"
+      },
+      {
+        "id": 940,
+        "name": "custom_Play 1",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 941,
+        "name": "custom_Play 2",
+        "description": "Placeholder for a custom dimension that captures data at the play level. To rename the dimension in the mega menu, go to `Configure`, navigate to the report pack tab of the entity selector, select the relevant report pack, and click on the dimension name. This field is only available for use with metrics at the play level.",
+        "type": "standard"
+      },
+      {
+        "id": 942,
+        "name": "Service Provider",
+        "description": "Set automatically and identifies the CDN or delivery service provider streaming the content by mapping stream URL patterns to it. Contact Akamai customer care and provide the stream URL patterns along with the respective CDN mappings to keep configurations up-to-date, and to avoid `Unknown`in this field. This field helps understand volume of traffic and the quality of experience across all service providers.",
+        "type": "standard"
+      },
+      {
+        "id": 943,
+        "name": "Show",
+        "description": "Show name associated with the title of the media. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 944,
+        "name": "Player Url",
+        "description": "Site or page that plays the content. This field helps you understand where the content is consumed, and if content sharing is allowed. It also helps in determining if sharing achieves the desired effect.",
+        "type": "standard"
+      },
+      {
+        "id": 945,
+        "name": "Referral Url",
+        "description": "Referrer that directed the viewer to your site/content. The values help in understanding how your content is accessed and measures the efficacy of marketing tactics used to drive traffic to your site/content.",
+        "type": "standard"
+      },
+      {
+        "id": 948,
+        "name": "Sub Category",
+        "description": "Name of the sub category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior. You can set this dimension to an internally used title categorization. Use less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 949,
+        "name": "Category",
+        "description": "Name of the category associated with the media title. 1 of 4 content taxonomy fields that help you understand the influence of content on audience behavior, you can set this dimension to any title categorization you use internally, for example: channel name, genre, content type (movies, tv shows, sports events, and so on). We recommend the use of less than 30 unique values to avoid too many confusing return values.",
+        "type": "standard"
+      },
+      {
+        "id": 953,
+        "name": "ISP",
+        "description": "Set automatically to the ISP used by the viewer to view the content.",
+        "type": "standard"
+      },
+      {
+        "id": 957,
+        "name": "Player Id",
+        "description": "Name and version of the player. Use no more than 30 values or this field is not very useful.",
+        "type": "standard"
+      },
+      {
+        "id": 958,
+        "name": "Live VOD 24x7",
+        "description": "Set dimension values to `L`, `O`, or `T` to indicate `Live`, `On Demand`, or `24x7` type content. If unset, the plug-in displays a default value.",
+        "type": "standard"
+      },
+      {
+        "id": 959,
+        "name": "Max Bitrate (Play)",
+        "description": "Set automatically to one of the following ranges: 0-550K, 550K - 700K, 700K, 1000K, 1000K - 1500K, 1500K-2500K, 2500K+ based on the maximum bit rate at which viewer viewed media during playback of a single title.",
+        "type": "standard"
+      }
+    ],
+    "metrics": [
+      {
+        "id": 608,
+        "name": "Ad Plays (Play Level)",
+        "type": "count",
+        "description": "Sum of ads that started. Available to plot with play-level bucketed dimensions."
+      },
+      {
+        "id": 609,
+        "name": "Plays with Ad Abandons",
+        "type": "count",
+        "description": "Total number of plays abandoned during ad playback."
+      },
+      {
+        "id": 610,
+        "name": "% Ad Abandons (Play Level)",
+        "unit": "%",
+        "type": "percent",
+        "description": "Percentage of plays abandoned during ad playback."
+      },
+      {
+        "id": 611,
+        "name": "Ad Density (Play Level)",
+        "type": "count",
+        "description": " Ad play time divided by content play time. Plotted with play-level dimensions. Use this field to understand how ad density varies across content categories, titles, geographies, and time so you can closely control your ad policy."
+      },
+      {
+        "id": 612,
+        "name": "Total Play Duration",
+        "unit": "mins",
+        "type": "time",
+        "description": "Sum of play duration of all plays, in seconds."
+      },
+      {
+        "id": 613,
+        "name": "Total Rebuffer time",
+        "unit": "secs",
+        "type": "time",
+        "description": "Sum of time spent rebuffering across all plays"
+      },
+      {
+        "id": 710,
+        "name": "Rebuffer Abandons",
+        "type": "count",
+        "description": "Sum of plays abandoned during a rebuffering event"
+      },
+      {
+        "id": 614,
+        "name": "Total Rebuffer Count",
+        "type": "count",
+        "description": "Sum of rebuffers across all plays"
+      },
+      {
+        "id": 71,
+        "name": "Plays Ended",
+        "type": "count",
+        "description": "Plays ended include both completed and abandoned plays. You can plot this metric with dimensions such as `Rebuffer Time per Minute` and `Rebuffers per Minute`."
+      }
+    ]
+  }
+]
